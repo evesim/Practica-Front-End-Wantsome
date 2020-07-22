@@ -120,22 +120,131 @@
             <br>
             <br>
             <br>
-            <!--EX3-->
-         <form action="/url server">
-             <label>Search for:</label>
-             <br>
-             <input type="search" name="Search" value="chocolate cheesecake recipes" />
-             <input type="submit" value="Search" />
-             <br>
-             <table>
-             <tr><td><label>Match:</label></td>
-             <td><input type="radio" name="matchRadio" checked /> Any word
-             <input type="radio" name="matchRadio" checked /> All words
-             <input type="radio" name="matchRadio" /> Exact phrase</td></tr></table>
-             <td></td><td><input type="checkbox" name="availCheckbox" /> Sound-alike matching</td></tr>
-             <br>
-
         </form>
+        <!--EX3-->
+        <form action="/url server">
+            <label>Search for:</label>
+            <br>
+            <input type="search" name="Search" value="chocolate cheesecake recipes" />
+            <input type="submit" value="Search" />
+            <br>
+            <table>
+                <tr>
+                    <td><label>Match:</label></td>
+                    <td><input type="radio" name="matchRadio" /> Any word
+                        <input type="radio" name="matchRadio" checked /> All words
+                        <input type="radio" name="matchRadio" /> Exact phrase</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="matchingCheckbox" checked /> Sound-alike matching</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><label>Dated:</label></td>
+                    <td><input type="radio" name="matchRadio" /> </td>
+                    <td><select>
+                            <option value="Within the last year">Within the last year</option>
+                            <option value="Within the last 6 months">Within the last 6 months</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td rowspan=2><input type="radio" name="datedRadio" checked /></td>
+                    <td>From:
+                        <input type="month" name="monthMin"> ,
+                        <input type="number" name="minYear">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=2>
+                    </td>
+                    <td>To:
+                        <input type="month" name="monthMax"> ,
+                        <input type="number" name="maxYear">
+                    </td>
+                </tr>
+            </table>
+            <label>Within:</label>
+            <select>
+                <option value="Description">Description</option>
+            </select>
+            <br>
+            <label>Show:</label>
+            <select>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+            </select>
+            <label>results</label>
+            <select>
+                <option value="with">with</option>
+                <option value="without">without</option>
+            </select>
+            <label>summaries</label>
+            <br>
+            <label>Sort by:</label>
+            <select>
+                <option value="relevance">relevance</option>
+                <option value="importance">importance</option>
+            </select>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--EX4-->
+        <h3>My feedback form</h3>
+        <form action="/ url server">
+            <ul>
+                <li><label>Name</label>
+                    <input type="text" name="Name" /></li>
+            </ul>
+            <ul>
+                <li><label>Email</label>
+                    <input type="email" name="email" /></li>
+            </ul>
+            <ul>
+                <li><label>Password</label>
+                    <input type="password" name="myPassword" /></li>
+            </ul>
+            <ul><dl><li><label>Please check all the emotions that apply to you:</label></li></dl>
+                <dd><li>Angry<input type="radio" name="angryRadio" checked/><br></li></dd>
+                <dd><li>Sad <input type="radio" name="sadRadio" /><br></li></dd>
+                <dd><li>Happy <input type="radio" name="happyRadio" /><br></li></dd>
+                <dd><li>Ambivalent <input type="radio" name="ambivalentRadio" /><br></li></dd>
+            </dl></ul>
+
+            <ul><dl><li><label>How satisfied were you with our services?</label></li></dl>
+                <dd><li> Very satisfied <input type="radio" name="vsatisfiedRadio" checked/><br></li></dd>
+                <dd><li>Satisfied <input type="radio" name="satisfiedRadio" /><br></li></dd>
+                <dd><li>Didn't care <input type="radio" name="didncareRadio" /><br></li></dd>
+                <dd><li>Dissatisfied <input type="radio" name="dissatisfiedRadio" /><br></li></dd>
+                <dd><li>Very dissatisfied <input type="radio" name="vdissatisfiedRadio" /></li></dd>
+            </dl></ul>
+            <ul>
+                <li><label>Further comments:</label>
+                    <input type="text" name="comments"></li>
+                </ul>
+            <ul>
+                <li> <label>Bio photo:</label>
+                    <input type="img" name="photo">
+                    <input type="button" name="choose" value="Choose..."></li>
+            </ul>
+            <ul>
+                <li><label>Location visited:</label>
+                    <select>
+                        <option value="Select location">Select location</option>
+                        <option value="Bucuresti">Bucuresti</option>
+                        <option value="Sibiu">Sibbiu</option>
+                    </select></li>
+            </ul>
+            <ul>
+                <li><input type="submit" name="submit"></li>
+            </ul>
+        </form>
+
     </body>
 
     </html>
