@@ -1,0 +1,142 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Forms</title>
+    </head>
+
+    <body>
+        <!--EX1-->
+        <form action="/url server">
+            <label>Last name</label>
+            <br>
+            <input type="text" name="lastName" required />
+            <br>
+            <label>First name</label>
+            <br>
+            <input type="text" name="firstName" required />
+            <br>
+            <label>Gender</label>
+            <br>
+            <input type="radio" name="genderRadio" checked /> Female
+            <input type="radio" name="genderRadio" /> Male
+            <input type="radio" name="genderRadio" /> Other
+            <br>
+            <label>Age</label>
+            <input type="number" name="age" min="18" max="85">
+            <br>
+            <label>Country</label>
+            <br>
+            <select name="countries">
+                <option value="Romania" selected>Romania</option>
+            </select>
+            <br>
+            <label> City </label>
+            <br>
+            <select name="cities">
+                <option value="Bucuresti" selected>Bucuresti</option>
+                <option value="Iasi">Iasi</option>
+                <option value="Cluj-Napoca">Cluj-Napoca</option>
+                <option value="Timisoara">Timisoara</option>
+                <option value="Brasov">Brasov</option>
+            </select>
+            <br>
+            <label>Address</label>
+            <br>
+            <input type="text" name="address" />
+            <br>
+            <label>Postal Code</label>
+            <br>
+            <input type="number" name="postalCode" />
+            <br>
+            <label>Email</label>
+            <br>
+            <input type="email" name="email" required /><br>
+            <label>Message</label>
+            <br>
+            <input type="text" name="message" />
+            <br>
+            <label>Attach CV</label>
+            <br>
+            <input type="file" name="myCV" />
+            <br>
+            <br>
+            <input type="submit" value="Send" />
+            <input type="reset" value="Reset" />
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--EX2-->
+        <h3>Travel rezervation form</h3>
+        <h5>*denotes mandatory</h5>
+        <form action="/url server">
+            <label>Full name*:</label>
+            <br>
+            <input type="text" name="fullName" placeholder="FirstName LastName" required />
+            <br>
+            <label>Email address*:</label>
+            <br>
+            <input type="email" name="email" placeholder="EMAIL_ADDRESS" required />
+            <br>
+            <label> Select Tour Package*: </label>
+            <br>
+            <select name="tourPackage" required>
+                <option value="Goa" selected>Goa</option>
+                <option value="Boa">Boa</option>
+                <option value="Zoa">Zoa</option>
+            </select>
+            <br>
+            <label>Arrival date*:</label>
+            <br>
+            <input type="text" name="arrivalDate" placeholder="m/d/y" required />
+            <!--type data will show d/m/y, ask Robert or Andrei -->
+            <br>
+            <label>Number of persons*:</label>
+            <br>
+            <input type="text" name="textPersons" placeholder="UNKNOWN_TYPE" required />
+            <br>
+            <label>What whould you want to avail?*</label>
+            <br>
+            Boarding <input type="checkbox" name="availCheckbox" />
+            <br>
+            Fooding <input type="checkbox" name="availCheckbox" />
+            <br>
+            Sight seeing<input type="checkbox" name="availCheckbox" />
+            <br>
+            <label>Discout Coupon code:</label>
+            <br>
+            <input type="text" name="textDiscout" placeholder="UNKNOWN_TYPE" />
+            <br>
+            <label>Terms and conditions*</label>
+            <br>
+            <input type="radio" name="T&CRadio" checked /> I agree
+            <input type="radio" name="T&CRadio" /> I disagree
+            <br>
+            <input type="submit" value="Complete reservation" />
+            <br>
+            <br>
+            <br>
+            <br>
+            <!--EX3-->
+         <form action="/url server">
+             <label>Search for:</label>
+             <br>
+             <input type="search" name="Search" value="chocolate cheesecake recipes" />
+             <input type="submit" value="Search" />
+             <br>
+             <table>
+             <tr><td><label>Match:</label></td>
+             <td><input type="radio" name="matchRadio" checked /> Any word
+             <input type="radio" name="matchRadio" checked /> All words
+             <input type="radio" name="matchRadio" /> Exact phrase</td></tr></table>
+             <td></td><td><input type="checkbox" name="availCheckbox" /> Sound-alike matching</td></tr>
+             <br>
+
+        </form>
+    </body>
+
+    </html>
+</DOCTYPE>
