@@ -4,14 +4,55 @@
     <head>
         <meta charset="UTF-8" />
         <title>Week 3, course 1</title>
-        <style> 
-         
+        <style>
+            p[title] {
+                color: red;
+            }
+
+            p[title="Vizibil la hover"] {
+                /* target all titles that have exact the title  Vizibil la hover*/
+                color: greenyellow;
+            }
+
+            p[title~="Second"] {
+                /* target all titles that have with Second*/
+                color: hotpink;
+            }
+
+            p[title|="This"] {
+                /* target all titles that have with ThisF*/
+
+                color: cyan;
+            }
+
+            a[href^="http://"] {
+                /* target all the href that begin with http:*/
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            a[href$=".com"] {
+                /*target all the href that begin with .com */
+                color: indigo;
+                font-weight: normal;
+            }
+
+            p[title*="CSS"] {
+                /*target all the p that contain CSS */
+                font-weight: bold;
+            }
         </style>
 
     </head>
 
     <body>
-       
+        <p title="Vizibil la hover">Azi este vineri</p>
+        <p title="Second title">Maine este sambata</p>
+        <p title="This-is-my-title">Maine este sambata</p>
+        <p title="We learn CSS">Wantsome</p>
+
+        <a href="http://www.elefant.ro">Subscribe</a>
+        <a href="http://www.yahoo.com">Subscribe</a>
     </body>
 
     </html>
