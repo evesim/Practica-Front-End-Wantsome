@@ -5,13 +5,76 @@
         <meta charset="UTF-8" />
         <title>Week 3, course 1</title>
         <style>
-          
+            a:link {
+                /*changes the color of the hyperlink*/
+                color: black;
+            }
+
+            a:visited {
+                /*changes the color of the hyperlink when clicked */
+
+                color: green;
+            }
+
+            a:hover {
+                /*changes the color of the hyperlink when hover is on */
+                color: red;
+
+            }
+
+            a:focus {
+                color: magenta;
+            }
+
+            my-check:checked {
+                /* when checkbox is clixk it changes his thingies*/
+                box-shadow: 2px
+                    /*horizontal */
+                    2px
+                    /*vertical */
+                    0
+                    /*blur-radius */
+                    3px
+                    /*spread-radius */
+                    red;
+            }
+
+            li:first-child {
+                /* First li */
+                color: blue;
+            }
+
+            li:last-child {
+                /* Last li */
+                color: green;
+            }
+
+            li:nth-child(2nd) {
+                /* Every second child (2-n-2) li */
+                color: white;
+                background:hotpink;
+            }
         </style>
 
     </head>
 
     <body>
-  
+        <a href="http://www.google.com">Got to google</a></br>
+        <a href="http://www.google.com">Second</a>
+
+        <input type="checkbox" name="my-checkbox" id="age" class="my-check">
+        <label for="age">I am over 18</label>
+        <ol>
+            <li>
+                Cafea
+            </li>
+            <li>
+                Suc
+            </li>
+            <li>
+                Apa
+            </li>
+        </ol>
     </body>
 
     </html>

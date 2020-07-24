@@ -145,8 +145,8 @@
                     <td><label>Dated:</label></td>
                     <td><input type="radio" name="matchRadio" /> </td>
                     <td><select>
-                            <option value="Within the last year">Within the last year</option>
-                            <option value="Within the last 6 months">Within the last 6 months</option>
+                            <option value="dated">Within the last year</option>
+                            <option value="dated">Within the last 6 months</option>
                         </select></td>
                 </tr>
                 <tr>
@@ -210,27 +210,27 @@
                     <input type="password" name="myPassword" /></li>
             </ul>
             <ul><dl><li><label>Please check all the emotions that apply to you:</label></li></dl>
-                <dd><li>Angry<input type="radio" name="angryRadio" checked/><br></li></dd>
-                <dd><li>Sad <input type="radio" name="sadRadio" /><br></li></dd>
-                <dd><li>Happy <input type="radio" name="happyRadio" /><br></li></dd>
-                <dd><li>Ambivalent <input type="radio" name="ambivalentRadio" /><br></li></dd>
+                <dd><li>Angry<input type="checkbox" name="angryCheckbox" checked/><br></li></dd>
+                <dd><li>Sad <input type="checkbox" name="sadCheckbox" /><br></li></dd>
+                <dd><li>Happy <input type="checkbox" name="happyCheckbox" /><br></li></dd>
+                <dd><li>Ambivalent <input type="checkbox" name="ambivalentCheckbox" /><br></li></dd>
             </dl></ul>
 
             <ul><dl><li><label>How satisfied were you with our services?</label></li></dl>
-                <dd><li> Very satisfied <input type="radio" name="vsatisfiedRadio" checked/><br></li></dd>
+                <dd><li> Very satisfied <input type="radio" name="satisfiedRadio" checked/><br></li></dd>
                 <dd><li>Satisfied <input type="radio" name="satisfiedRadio" /><br></li></dd>
-                <dd><li>Didn't care <input type="radio" name="didncareRadio" /><br></li></dd>
-                <dd><li>Dissatisfied <input type="radio" name="dissatisfiedRadio" /><br></li></dd>
-                <dd><li>Very dissatisfied <input type="radio" name="vdissatisfiedRadio" /></li></dd>
+                <dd><li>Didn't care <input type="radio" name="satisfiedRadio" /><br></li></dd>
+                <dd><li>Dissatisfied <input type="radio" name="satisfiedRadio" /><br></li></dd>
+                <dd><li>Very dissatisfied <input type="radio" name="satisfiedRadio" /></li></dd>
             </dl></ul>
             <ul>
                 <li><label>Further comments:</label>
-                    <input type="text" name="comments"></li>
+                    <input type="textarea" name="comments"></li>
                 </ul>
             <ul>
                 <li> <label>Bio photo:</label>
                     <input type="img" name="photo">
-                    <input type="button" name="choose" value="Choose..."></li>
+                    <input type="file" name="choose" value="Choose..."></li>
             </ul>
             <ul>
                 <li><label>Location visited:</label>
