@@ -5,8 +5,42 @@
         <meta charset="UTF-8" />
         <title>Week 3, course 2 - Box Modell</title>
         <style>
+            * {
+                /*Eliminates the margin */
+                margin: 0;
+                padding: 0;
+                 /* box-sizing: content-box; - just the content has 350px for width */
+                 box-sizing: border-box; /* all the box has 350px with margins and all */
+            }
+
             .content {
-                border:soliid 1px gray;
+                border: solid 1px gray;
+                /* rectangular the edges of the box */
+                border-radius: 10px;
+                /* circle the edges of the box */
+                border-bottom-color: pink;
+                border-top-color: red;
+                /*border-top:solid 3px red; - makes only the top border, without the other*/
+                width: 350px;
+                /* the space from inside the box - arranges the content from the inside*/
+                min-width: 400px;
+                /*will not change on resize - min side - we have also min-height*/
+                max-width: 500px;
+                /*will not change on resize - max side  - we have also max-height*/
+                padding-top: 10px;
+                /*space on the t1op */
+                padding-bottom: 10px;
+                /*space on the bottom */
+                padding-left: 10px;
+                /*space on the left */
+                padding-right: 10px;
+                /*space on the right */
+                /* padding: 10px; - space on the all four sides*/
+                /* padding: padding-top padding-right padding-bottom padding left;
+                    ex. padding 5px 20px 30px 60px; */
+                margin: 50px;
+                /* the space from oustide the box - arranges the content from the outside*/
+                background-color: lightblue;           
             }
         </style>
 
