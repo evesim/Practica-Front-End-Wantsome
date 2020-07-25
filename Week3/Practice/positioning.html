@@ -5,33 +5,69 @@
     <meta charset="UTF-8" />
     <title>Week 3, course 2 Practice- Positioning</title>
     <style>
-      header{
-          display: flex;
-          background-color: lightcoral;
-      }
-      ul{
-          display:inline-flex;
-          list-style-type: none;
-      }
-      ul li{
-          padding:10px;
-      }
+        body {
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            background-color: lightcoral;
+            position: fixed;
+            /*the header will remained fix*/
+            width: 100%;
+            /*the  width will be full on the window*/
+            top: 0;
+            /*the distance from the top will be 0 */
+        }
+
+        ul {
+            display: inline-flex;
+            list-style-type: none;
+        }
+
+        ul li {
+            padding: 10px;
+        }
+
+        .box {
+            width: 300px;
+            height: 130px;
+            background-color: lightgreen;
+        }
+
+        .main-content {
+            position: relative;
+            /*the position relative to top=left*/
+            top: 80px;
+            /*guess the height of the header*/
+            z-index: -1;
+            /*goes under the header*/
+        }
+
+        .absolute-div {
+            width: 300px;
+            height: 130px;
+            background-color: lightskyblue;
+            position: absolute; /*referes  to the first position:relative, if it isn't, the it will refer to top-left*/
+            top: 0px;
+            left:320px;
+        }
     </style>
 
 </head>
 
 <body>
-       <header>
-           <h1>
-Hello World!
-           </h1>
-           <ul>
-               <li>Home</li>
-               <li>Products</li>
-               <li>About</li>
-           </ul>
-       </header>
-       <div class="main-content">
+    <header>
+        <h1>
+            Hello World!
+        </h1>
+        <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li>About</li>
+        </ul>
+    </header>
+    <div class="main-content">
         <div class="box">
             <p>Sambata</p>
         </div>
@@ -41,9 +77,19 @@ Hello World!
         <div class="box">
             <p>Luni</p>
         </div>
-
-
-       </div>
+        <div class="box">
+            <p>Sambata</p>
+        </div>
+        <div class="box">
+            <p>Duminica</p>
+        </div>
+        <div class="box">
+            <p>Luni</p>
+        </div>
+        <div class="absolute-div">
+            <p>Pozitionare absoluta</p>
+        </div>
+    </div>
 </body>
 
 </html>
