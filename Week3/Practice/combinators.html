@@ -5,13 +5,56 @@
         <meta charset="UTF-8" />
         <title>Week 3, course 2</title>
         <style>
+            div p {
+                /* changes the color of all the p from div - copii descendenti*/
+                color: red;
+            }
 
+            body>p {
+                /* changes the color of all the p from body - copii directi*/
+                color: blue;
+            }
+
+            h2+p {
+                /* h2 indentificator for the first p after him, so it colors the p */
+                color: blueviolet;
+            }
+
+            h2~p {
+                /*target all the elements after h2 including h2*/
+                color: palevioletred;
+            }
+
+            h1:hover,
+            h2:hover,
+            p:hover {
+                font-size: 20px;
+                color: cyan;
+            }
+
+            p {
+                /*all he p changes the color*/
+                color: red;
+            }
+            
         </style>
 
     </head>
 
     <body>
         <h1>Part 2 CSS</h1>
+        <div>
+            <h2>Awesome Weekend</h2>
+            <p>Text 1</p>
+            <p>Text 2</p>
+            <p>Text 3</p>
+            <p>Text 4</p>
+        </div>
+        <p>Single text 1</p>
+        <p>Single text 2</p>
+        <p>Single text 3</p>
+        <p>Single text 14</p>
+
     </body>
 
     </html>
