@@ -35,6 +35,16 @@
             background-color: lightgreen;
         }
 
+        .absolute-div {
+            width: 300px;
+            height: 130px;
+            background-color: lightskyblue;
+            position: absolute;
+            /*referes  to the first position:relative, if it isn't, the it will refer to top-left*/
+            top: 0px;
+            left: 320px;
+        }
+
         .main-content {
             position: relative;
             /*the position relative to top=left*/
@@ -42,19 +52,11 @@
             /*guess the height of the header*/
             z-index: -1;
             /*goes under the header*/
-        }
-
-        .absolute-div {
-            width: 300px;
-            height: 130px;
-            background-color: lightskyblue;
-            position: absolute; /*referes  to the first position:relative, if it isn't, the it will refer to top-left*/
-            top: 0px;
-            left:320px;
+            background-color: lightgray;
         }
     </style>
 
-</head>
+</head>Done
 
 <body>
     <header>
