@@ -7,11 +7,25 @@
     <style>
         .container{
             position:absolute;
+            color:hotpink;
+            border:solid 2px pink;
+        }
+        .paragraph{
+            display:inline-block;
+            position: relative;
+            border:solid 2px yellow;
+            left:115px;
+            width:100%;
+        }
+        .endPage{
+            border:solid 2px greenyellow;
+            position:relative;
+            width:100%
         }
 
     </style>
 
-</head>Done
+</head>
 
 <body>
     <header>
@@ -29,22 +43,25 @@
             <li>Contact</li>
         </ul>
     </nav>
-    <section>
+    <section class="paragraph">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book.
         </p>
     </section>
-    <section>
+    <section class="paragraph">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book.</p>
     </section>
-    <section>
+    <section class="paragraph">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book.</p>
     </section>
+    <footer class="endPage">
+        <p>Lorem Ipsum is simply dummy text</p>
+    </footer>
 </body>
 
 </html>
