@@ -28,15 +28,7 @@
 
             my-check:checked {
                 /* when checkbox is clixk it changes his thingies*/
-                box-shadow: 2px
-                    /*horizontal */
-                    2px
-                    /*vertical */
-                    0
-                    /*blur-radius */
-                    3px
-                    /*spread-radius */
-                    red;
+                box-shadow: 2px  /*horizontal */  2px /*vertical */ 0 /*blur-radius */ 3px /*spread-radius */ red;
             }
 
             li:first-child {
@@ -49,10 +41,14 @@
                 color: green;
             }
 
-            li:nth-child(2nd) {
+            li:nth-child(2n) {
                 /* Every second child (2-n-2) li */
                 color: white;
                 background:hotpink;
+            }
+            li:not(class="suc"){
+                /*applies the changes but not the change of color in black for the suc element*/
+                color:black;
             }
         </style>
 
@@ -68,14 +64,22 @@
             <li>
                 Cafea
             </li>
-            <li>
+            <li class="suc">
                 Suc
             </li>
             <li>
                 Apa
             </li>
+            <li>
+                Ceai
+            </li>
+            <li>
+                Cafea
+            </li>
+            <li>
+                Suc
+            </li>
         </ol>
     </body>
 
     </html>
-</DOCTYPE>
