@@ -46,6 +46,14 @@ input[placeholder="last name"] {
     color: blue;
 }
 
-input[type=email] {
-    
+input[type=password] {
+    color: transparent;
+}
+
+/*input[type=email]{
+
+}*/
+
+input[type=submit]:hover{
+    background-color:red;
 }
