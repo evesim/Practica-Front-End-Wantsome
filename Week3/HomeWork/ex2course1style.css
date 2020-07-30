@@ -1,0 +1,25 @@
+input[type=text] {
+    color: red;
+}
+
+input[type=radio] {
+    background-color: cyan;
+}
+
+input[type=submit]:hover {
+    background-color: green;
+}
+
+input[type=reset]:hover {
+    color: yellow;
+}
+
+label {
+    border_bottom: solid 2px hotpink;
+}
+
+#cities {
+    border-radius: 15px;
+    background-color: blue;
+    font: normal Arial;
+}
