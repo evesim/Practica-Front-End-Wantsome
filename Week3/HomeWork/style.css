@@ -52,7 +52,7 @@ input[type=password] {
 
 input[type=email]::selection {
     color: hotpink;
-    background: yellow;
+    background: yellow; 
 }
 
 input[type=submit]:hover {
