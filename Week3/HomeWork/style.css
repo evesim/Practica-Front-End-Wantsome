@@ -50,10 +50,11 @@ input[type=password] {
     color: transparent;
 }
 
-/*input[type=email]{
+input[type=email]::selection {
+    color: hotpink;
+    background: yellow;
+}
 
-}*/
-
-input[type=submit]:hover{
-    background-color:red;
+input[type=submit]:hover {
+    background-color: red;
 }
