@@ -1,7 +1,9 @@
 input[type=text] {
     color: red;
 }
-
+#lastname{
+    border:dotted 10px green
+}
 input[type=radio] {
     background-color: cyan;
 }
@@ -15,11 +17,11 @@ input[type=reset]:hover {
 }
 
 label {
-    border_bottom: solid 2px hotpink;
+    border-bottom: solid 2px hotpink;
 }
 
 #cities {
     border-radius: 15px;
-    background-color: blue;
-    font: normal Arial;
+    background-color: orange;
+    font: Arial white;
 }
