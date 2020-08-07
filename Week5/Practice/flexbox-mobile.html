@@ -54,6 +54,7 @@
             }
 
             @media screen and (max-width: 700px)
+
             /*when the screen under or above 700 do this: (overwrites)*/
                 {
                 footer {
@@ -65,9 +66,18 @@
                 }
             }
 
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 600px)
+
+            /* use it for phone */
+                {
                 .container {
                     flex-direction: column;
+                }
+
+                p {
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: white;
                 }
             }
         </style>
