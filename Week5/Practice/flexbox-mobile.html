@@ -1,0 +1,94 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Week 5, course 1</title>
+        <style>
+            * {
+                margin: 0px;
+                box-sizing: border-box;
+            }
+
+            header {
+                background-color: blueviolet;
+                width: 100%;
+                padding: 40px;
+            }
+
+            .box {
+                padding: 60px;
+                height: 80vh;
+                /* the height of what the viewer sees */
+            }
+
+            .right {
+                background-color: chartreuse;
+                flex-shrink: 0;
+                /* - will remain fixed */
+            }
+
+            .left {
+                background-color: cornflowerblue;
+                flex-shrink: 0;
+                /* - will remain fixed */
+            }
+
+            .center {
+                background-color: darkgrey;
+                flex-grow: 1;
+            }
+
+            .container {
+                display: flex;
+            }
+
+            footer {
+                width: 100%;
+                background-color: goldenrod;
+                padding: 30px;
+                position: fixed;
+                /* - stays fixed at the bottom  */
+                bottom: 0;
+                /* - stays fixed at the bottom  */
+            }
+
+            @media screen and (max-width: 700px)
+            /*when the screen under or above 700 do this: (overwrites)*/
+                {
+                footer {
+                    background-color: red;
+                }
+
+                .center {
+                    background-color: black;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .container {
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h2>This is my header</h2>
+        </header>
+
+        <div class="container">
+            <div class="box left">Left side (fixed)</div>
+            <div class="box center">Center content (flexible)</div>
+            <div class="box right">Right side (fixed)</div>
+        </div>
+        <footer>
+            <p>Thank you for visiting</p>
+        </footer>
+
+
+    </body>
+
+    </html>
+</DOCTYPE>
