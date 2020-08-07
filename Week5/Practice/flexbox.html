@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UTF-8" />
-        <title>Week 3, course 1</title>
+        <title>Week 5, course 1</title>
         <style>
             * {
                 margin: 0px;
@@ -18,18 +18,22 @@
 
             .box {
                 padding: 60px;
+                height: 80vh; /* the height of what the viewer sees */
             }
 
             .right {
                 background-color: chartreuse;
+                flex-shrink: 0; /* - will remain fixed */
             }
 
             .left {
-                background-color: cornflowerblue;
+                background-color: cornflowerblue; 
+                flex-shrink: 0; /* - will remain fixed */
             }
 
             .center {
                 background-color: darkgrey;
+                flex-grow: 1;
             }
 
             .container {
@@ -40,6 +44,8 @@
                 width: 100%;
                 background-color: goldenrod;
                 padding: 30px;
+                position: fixed; /* - stays fixed at the bottom  */
+                bottom: 0; /* - stays fixed at the bottom  */
             }
         </style>
     </head>
@@ -50,9 +56,9 @@
         </header>
 
         <div class="container">
-            <div class="left">Left side (fixed)</div>
-            <div class="center">Center content (flexible)</div>
-            <div class="left">Right side (fixed)</div>
+            <div class="box left">Left side (fixed)</div>
+            <div class="box center">Center content (flexible)</div>
+            <div class="box right">Right side (fixed)</div>
         </div>
         <footer>
             <p>Thank you for visiting</p>
