@@ -1,5 +1,16 @@
 $title-color:red;
 
+$radius:10px;
+$button-border: 2px;
+$border-color: lightgray;
+$color: lightblue;
+
 .title{
     color: $title-color; 
+}
+
+.myButton{
+    border-radius: $radius;
+    border: solid $button-border $border-color;
+    background-color: $color;
 }

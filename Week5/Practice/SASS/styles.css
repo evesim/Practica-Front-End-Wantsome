@@ -1,4 +1,10 @@
 .title {
   color: red;
 }
+
+.myButton {
+  border-radius: 10px;
+  border: solid 2px lightgray;
+  background-color: lightblue;
+}
 /*# sourceMappingURL=styles.css.map */
