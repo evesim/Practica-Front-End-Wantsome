@@ -45,4 +45,37 @@
   background-color: white;
   border-color: lightseagreen;
 }
+
+.menu {
+  background-color: hotpink;
+  padding: 10px 25px;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+}
+
+.menu:hover {
+  background-color: lightgreen;
+}
+
+.product {
+  background-color: red;
+  padding: 10px 25px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.product:hover {
+  background-color: blue;
+}
+
+.normal {
+  padding: 10px 30px;
+  color: #333;
+  width: 500px;
+  border: solid 2px #ccc;
+  text-align: center;
+  margin: 10px;
+}
 /*# sourceMappingURL=styles.css.map */

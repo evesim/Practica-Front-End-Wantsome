@@ -1,0 +1,12 @@
+%shared-message{
+    padding: 10px 30px;
+    color: #333;
+    width:500px;
+    border:solid 2px #ccc;
+    text-align: center;
+    margin: 10px;
+}
+
+.normal{
+    @extend %shared-message;
+}
