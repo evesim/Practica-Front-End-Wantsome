@@ -1,0 +1,16 @@
+@mixin form-button {
+    background-color: lightgreen;
+    font-weight: bold;
+    border: solid 1px black;
+    color: black;
+    padding: 5px 15px;
+
+    &:hover{
+        background-color: white;
+        border-color: lightseagreen;
+    }
+}
+
+.subscribe-button{
+    @include form-buttons;
+}

@@ -11,4 +11,25 @@
 .container {
   max-width: 1600px;
 }
+
+.myList h2 {
+  color: pink;
+  margin: 0px;
+}
+
+.myList ul {
+  margin: 10px;
+  list-style: none;
+  color: red;
+}
+
+.myList li:hover {
+  color: lime;
+}
+
+.myList .classA {
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+}
 /*# sourceMappingURL=styles.css.map */
