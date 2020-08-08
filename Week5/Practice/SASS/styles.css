@@ -32,4 +32,17 @@
   height: 30px;
   background-color: yellow;
 }
+
+.subscribe-button {
+  background-color: lightgreen;
+  font-weight: bold;
+  border: solid 1px black;
+  color: black;
+  padding: 5px 15px;
+}
+
+.subscribe-button:hover {
+  background-color: white;
+  border-color: lightseagreen;
+}
 /*# sourceMappingURL=styles.css.map */
