@@ -10,3 +10,20 @@
 .normal{
     @extend %shared-message;
 }
+
+.success{
+    @extend %shared-message;
+    border-color: greenyellow;
+    color:green;
+}
+
+.error{
+    @extend %shared-message;
+    border-color: red;
+    color:darkred;
+    font-weight: bold;
+}
+
+
+
+
