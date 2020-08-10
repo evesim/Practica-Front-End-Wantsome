@@ -1,0 +1,30 @@
+%shared-message{
+    padding: 10px 30px;
+    color: #333;
+    // width:800px;
+    width: 600px/960px*100%;
+    border:solid 2px #ccc;
+    text-align: center;
+    margin: 10px;
+}
+
+.normal{
+    @extend %shared-message;
+}
+
+.success{
+    @extend %shared-message;
+    border-color: greenyellow;
+    color:green;
+}
+
+.error{
+    @extend %shared-message;
+    border-color: red;
+    color:darkred;
+    font-weight: bold;
+}
+
+
+
+

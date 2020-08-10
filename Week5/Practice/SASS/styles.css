@@ -1,0 +1,92 @@
+.title {
+  color: red;
+}
+
+.myButton {
+  border-radius: 10px;
+  border: solid 2px lightgray;
+  background-color: lightblue;
+}
+
+.container {
+  max-width: 1600px;
+}
+
+.myList h2 {
+  color: pink;
+  margin: 0px;
+}
+
+.myList ul {
+  margin: 10px;
+  list-style: none;
+  color: red;
+}
+
+.myList li:hover {
+  color: lime;
+}
+
+.myList .classA {
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+}
+
+.subscribe-button {
+  background-color: lightgreen;
+  font-weight: bold;
+  border: solid 1px black;
+  color: black;
+  padding: 5px 15px;
+}
+
+.subscribe-button:hover {
+  background-color: white;
+  border-color: lightseagreen;
+}
+
+.menu {
+  background-color: hotpink;
+  padding: 10px 25px;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+}
+
+.menu:hover {
+  background-color: lightgreen;
+}
+
+.product {
+  background-color: red;
+  padding: 10px 25px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.product:hover {
+  background-color: blue;
+}
+
+.normal, .success, .error {
+  padding: 10px 30px;
+  color: #333;
+  width: 62.5%;
+  border: solid 2px #ccc;
+  text-align: center;
+  margin: 10px;
+}
+
+.success {
+  border-color: greenyellow;
+  color: green;
+}
+
+.error {
+  border-color: red;
+  color: darkred;
+  font-weight: bold;
+}
+/*# sourceMappingURL=styles.css.map */

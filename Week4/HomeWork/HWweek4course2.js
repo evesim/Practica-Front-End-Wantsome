@@ -59,10 +59,10 @@ function insert(myVar, myWord, position) {
 }
 console.log(insert('We are doing some exercises', 'Javascript', 18));
 
-//EX9 - something doesn't work
+//EX9
 function remove_first_occurance(myVar, word) {
     var positionWord = myVar.indexOf(word);   // Finds out the position of word
-    return myVar.slice(0, positionWord) + myVar.slice(positionWord, myVar.length);
+    return myVar.slice(0, positionWord) + myVar.slice(positionWord + word.length, myVar.length);
 }
 console.log(remove_first_occurance("The quick brown fox jumps over the lazy dog", 'the'));
 

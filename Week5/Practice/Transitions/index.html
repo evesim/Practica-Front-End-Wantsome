@@ -1,0 +1,47 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Week 5, course 2 - Transitions</title>
+
+        <style>
+            .red {
+                background-color: red;
+                width: 100px;
+                height: 100px;
+                transition-property: width;
+                transition-duration: 1s;
+                transition-timing-function: ease-out;
+            }
+
+            .blue {
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+                transition-property: width;
+                transition-duration: 1s;
+                transition-timing-function: ease-out;
+                transition-delay: 0.5s;
+
+            }
+
+            .container:hover .red {
+                width: 350px;
+            }
+
+            .container:hover .blue {
+                width: 350px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="red"></div>
+            <div class="blue"></div>
+        </div>
+    </body>
+
+    </html>
+</DOCTYPE>
