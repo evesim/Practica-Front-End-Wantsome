@@ -5,10 +5,68 @@
         <meta charset="UTF-8" />
         <title>Week 6, course 1</title>
         <script>
-            var fruits=['clementine','kiwi','ananans','mango'];
+            //length + position
+            var fruits = ['clementine', 'kiwi', 'ananans', 'mango'];
             console.log(fruits.length); //shows the length of the array
             console.log(fruits[0]); //shows the first/index elements of the array
+            console.log(fruits[2]); //shows the third elemt of the array
+
+            //concat
+            var cars = ['mustang', 'aro', 'bmw'];
+            var sportCars = ['tigra', 'porche'];
+            var allCars = cars.concat(sportCars);
+            console.log(allCars);
+
+            //isArray
+            console.log(Array.isArray(cars)); //is the cars an array? - True
+            var animal = 'cat';
+            console.log(Array.isArray(animal)); //is the cars an array? - False - it's a string
+
+            //join
+            var stringOfFruits = fruits.join();
+            console.log(stringOfFruits); //pulls out the element from the array and makes them a string
+            var stringOfFruits = fruits.join('-'); //adds a - between the elements
+
+            //push
+            var names = ['Ion', 'Maria', 'Gigel'];
+            console.log(names);
+            names.push('Gogu'); //adds an element at the end of the array
+            console.log(names);
+
+            ///pop
+            names.pop(); //deletes an element at the end of the array
+            console.log(names);
+
+            //shift
+            names.shift(); //deletes an element at the begining of the array
+            console.log(names);
+
+            //unshift
+            name.unshift(); //adds an elements at the begining of the array
+            console.log(names);
+
+            //reverse
+            name.reverse(); //inverts all the array - the first elements will be the last one
+            console.log(names);
+
+            //sort
+            name.sort(); //arranges the elements in the alphabetic order
+            console.log(names);
+            var numbers = [1, 5, -7, 32, 22];
+            numbers.sort(); //compares only the first index and will define the position and then will go to the subunit
+            console.log(numbers);
+
+            numbers.sort(function (a, b) {
+                return a - b; //the array will be in the incresing order
+                return b - a; //the array will be in the decresing order
+            });
+
+            //splice
+            var cities=['Iasi','Bucuresti','Timisoara','Cluj','Brasov','Arad','Sibiu'];
+            cities.splice(1, 2, 'Constanta', 'Craiova'); // from where it begins, how many elements I want to delete, what I want to introduce in their place - modifies the array
+            console.log(cities);
         </script>
+
     </head>
 
     <body>
