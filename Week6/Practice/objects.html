@@ -5,6 +5,90 @@
         <meta charset="UTF-8" />
         <title>Week 6, course 1</title>
         <script>
+            var user = { //has proprieties inside - will be defined under the format of Key and Value
+                name: 'Gogu', // name is Key, Gogu is Value
+                age: 23,
+                nationality: 'english',
+                hobbies: ['footbal', 'music', 'books'],
+            };
+            console.log(user);
+
+            // add propieties
+            user.gender = 'male'; //adds a new propriety (version 1)
+            console.log(user);
+            user['job'] = 'Developer'; //adds a new propriety (version2)
+
+            //delete proprieties
+            delete user.age; //deletes the (age) propriety
+            console.log(user);
+
+            //access propriety
+            var laptop = {
+                color: 'hotpink',
+                specifications: { //we can have objects in objects
+                    processor: 'Interl Xcore',
+                    ssd: true,
+                    capacity: '2T',
+                },
+                weight: '2kg',
+                display: 'FullHD',
+                installedSoftware: true,
+                keyboard: ['en', 'ro', 'es'], //0,1,2
+            };
+            console.log(laptop);
+            console.log(laptop.color); //will print the (color) propriety
+            console.log(laptop.specifications.processor); //will print the (processor form specifications) propriety
+            console.log(laptop.display); //will print the (display) propriety
+            console.log(laptop.keyboard[2]); //will print the (es) propriety
+            console.log(laptop.keyboard.join()); // will print all the proprieties from keyboard string mode
+
+            //functions
+            var animal = {
+                type: 'dog',
+                gender: 'female',
+                saySomething: function () { console.log('Woof!!') },
+            };
+            animal.saySomething; //will print the function
+            console.log(animal.type); //will print the (tyoe) propriety
+
+            //this
+            var user = {
+                name: "Cristina",
+                age: 22,
+                saySomethingAboutUser: function () {
+                    console.log(this.name + " are " + this.age); //to be sure that we refer at the specific key in the object we use 'this'
+                },
+            };
+            user.saySomethingAboutUser();
+
+            //Key and Value
+            var laptopHP = {
+                color: 'hotpink',
+                specifications: { //we can have objects in objects
+                    processor: 'Interl Xcore',
+                    ssd: true,
+                    capacity: '2T',
+                },
+                weight: '2kg',
+                display: 'FullHD',
+                installedSoftware: true,
+                keyboard: ['en', 'ro', 'es'], //0,1,2
+            };
+            var objKeys = Object.keys(laptopHP); //takes only the keys from the object
+            console.log(objKeys); //will print an array (of the keys)
+            var objValue = Object.values(laptopHP); //takes only the values from the object
+            console.log(objValue); //will print an array (of the values)
+
+            //Object constructors - methods of building objects
+            function Car(make, model, year) { //make, model, year - are parameters
+                this.make = make;
+                this.model = model;
+                this.year = year;
+            }
+            var myCar = new Car('audi', 'q6', '2017'); //will create the object
+            console.log(myCar);
+            var myNewCar = new Car('skoda', 'scala', '2019'); //can create how many object we want because of the object constructor
+            console.log(myNewCar);
 
         </script>
 
