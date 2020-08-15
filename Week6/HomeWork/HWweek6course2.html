@@ -79,6 +79,106 @@
             //- daca venitul anual se situeaza intre $50,000 - $99,999, taxa calculata trebuie sa fie 35%
             //- pentru venit mai mare de $100,000, taxa se calculeaza ca procentaj de 40%
             //Returnati un text care sa aiba un format asemanator: “Pentru un venit anual de x, aveti de platit taxe in valoare de y”
+
+            function taxes(venit) {
+                if (venit < 30000) {
+                    var tax = 0;
+                    console.log('Pentru un venit anual de ' + venit + ', aveti de platit taxe in valoare de ' + tax);
+                } else if ((venit > 50000) || (venit < 99999)) {
+                    var tax = 35 / 100 * venit;
+                    console.log('Pentru un venit anual de ' + venit + ', aveti de platit taxe in valoare de ' + tax);
+                } else {
+                    var tax = 40 / 100 * venit;
+                    console.log('Pentru un venit anual de ' + venit + ', aveti de platit taxe in valoare de ' + tax);
+                }
+            }
+            taxes(55000);
+
+            //5. Scrieti in doua variante o functie care accepta ca argument o valoare numerica pentru un parametru numit points si
+            //afiseaza:
+            //- AA if points is greater than 90
+            //- AB if points is greater than 80 and less than or equal to 90
+            //- BB if points is greater than 70 and less than or equal to 80
+            //- BC if points is greater than 60 and less than or equal to 70
+            //- CC if points is greater than 50 and less than or equal to 60
+            //- CD if points is greater than 40 and less than or equal to 50    
+            //- DD if points is greater than 30 and less than or equal to 40
+            //- FF if points is less than or equal to 30
+
+            //var1
+            function showPoints(points) {
+                if ((points < 30) || (points == 30)) {
+                    console.log('FF');
+                } else if ((points < 40) || (points == 40)) {
+                    console.log('DD');
+                } else if ((points < 50) || (points == 50)) {
+                    console.log('CD');
+                } else if ((points < 60) || (points == 60)) {
+                    console.log('CC');
+                } else if ((points < 70) || (points == 70)) {
+                    console.log('BC');
+                } else if ((points < 80) || (points == 80)) {
+                    console.log('BB');
+                } else if ((points < 90) || (points == 90)) {
+                    console.log('AB');
+                } else {
+                    console.log('AA');
+                }
+            }
+            showPoints(48);
+            //var2
+            var showPoints = function (points) {
+                if (points < 30 && points == 30) {
+                    console.log('FF');
+                } else if (points <= 40) {
+                    console.log('DD');
+                } else if (points <= 50) {
+                    console.log('CD');
+                } else if (points <= 60) {
+                    console.log('CC');
+                } else if (points <= 70) {
+                    console.log('BC');
+                } else if (points <= 80) {
+                    console.log('BB');
+                } else if (points <= 90) {
+                    console.log('AB');
+                } else {
+                    console.log('AA');
+                }
+            }
+            showPoints(48);
+
+            //6. Scrieti o functie care testeaza daca o anumita data introdusa este in weekend:
+            function is_weekend(date) {
+                var weekendDate = new Date(date).getDay();
+                if ((weekendDate == 6) || (weekendDate == 0)) {
+                    return "weekend";
+
+                }
+            }
+            console.log(is_weekend('Nov 15, 2014'));
+            console.log(is_weekend('Nov 16, 2014'));
+            console.log(is_weekend('Nov 17, 2014'));
+
+            //1. Scrieti o functie sub forma named function care accepta ca argument un CNP si verifica sexul unei persoane. 
+            //In urma apelului acestei functii, se va returna un text de forma "Persoana verificata este de sexul M/F".
+            function gender(cnp) {
+                var sex = cnp.charAt(0);
+                if (sex == 1) {
+                    return "Persoana verificata este de sexul M";
+                } else if (sex == 2) {
+                    return "Persoana verificata este de sexul F";
+                }
+            }
+            console.log(gender('235488965'));
+                        //
+
+
+
+
+
+
+
         </script>
 
     </head>
