@@ -1,0 +1,52 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Week 6, course 1</title>
+        <script>
+            function nameFunction() {
+                console.log('You called me');
+            }
+            nameFunction();
+
+            function sum(a, b) {
+                return a + b;
+            }
+            console.log(sum(4, 5));
+
+            //NAMED FUNCTIONS - they are name, have a name after function
+            function showMessage(text) { // - function header
+                console.log(text); //code block of the function
+            }
+            showMessage('You keep calling me');
+
+            //FUNCTION EXPRESSIONS
+            var myFunction = function (a, b) {
+                return a * b;
+            }
+            console.log(myFunction(3, 4));
+
+            //ANONYMUS FUNCTION
+            var anonymus = function(){
+                console.log('Hi, I don`t have a name');
+            }
+            anonymus();
+
+            //IMMEDIATELY INVOKED FUNCTION EXPRESSION - it's selfexecuting ans selfcalling
+            (function (){
+                var message= 'I can call myself, don`t need help';
+                console.log(message);
+            })(); //the function will execute itselft, no need for calling
+
+
+        </script>
+
+    </head>
+
+    <body>
+        <h1>JAVASCRIPT</h1>
+    </body>
+
+    </html>
+</DOCTYPE>
