@@ -1,0 +1,84 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Week 6, course 2</title>
+        <script>
+            //1. Scrieti o functie de tip named function denumita greatestNrBetween care:
+            //- Primeste ca argumente doua numere
+            //- Returneaza numarul care este mai mare
+            //Apelati functia de doua ori si afisati pe ecran textul: “Numarul mai mare dintre 5 si 10 este 10“
+
+            function greatestNrBetween(a, b) {
+                if (a > b) {
+                    console.log('The biggest number bettween ' + a + ' and ' + b + ' is ' + a);
+                    return a;
+                } else if (a === b) {
+                    console.log('Numbers are equal');
+                } else {
+                    console.log('The biggest number bettween ' + a + ' and ' + b + ' is ' + b);
+                    return b;
+                }
+            }
+            greatestNrBetween(5, 10);
+            greatestNrBetween(5, 5);
+            greatestNrBetween(900, 20);
+
+            //2. Scrieti o functie de tip function expression asociata cu numele helloWorldInLang care:
+            //- Primeste ca argument codul unei limbi: “en”, “es”, “de”
+            //- Returneaza “Hello World” pentru limba corespunzatoare ( cel putin 3 limbi )
+            //- Daca limba nu este specificata, trebuie sa returneze textul pentru limba engleza
+            //Apelati functia pentru fiecare caz in parte.
+
+            var helloWorldInLang = function (lang) {
+                switch (lang) {
+                    case 'en': {
+                        console.log('Hello World!');
+                    }
+                        break;
+                    case 'es': {
+                        console.log('Hola Mundo!');
+                    }
+                        break;
+                    case 'de': {
+                        console.log('Hallo Welt!');
+                    }
+                        break;
+                    default: {
+                        console.log('Hello World!')
+                    }
+                }
+            }
+            helloWorldInLang('en');
+            helloWorldInLang('es');
+            helloWorldInLang('de');
+            helloWorldInLang('hu');
+
+            // 3. Scrieti o functie numita pluralizeWord care:
+            //- accepta doua argumente: un substantiv in engleza si un numar
+            //- returneaza numarul si forma de plural corespunzatoare substantivului, precum: “5 cats”, “1 dog”
+            //- adaugati cateva cazuri particulare pentru cuvinte precum “sheep” sau “geese” 
+
+            function pluralizeWord(subst, nr) {
+                if (nr > 1) {
+                    console.log(nr + ' ' + subst + 's');
+                } else if ((subst == 'sheep')||(subst == "geese")) {
+                    console.log(nr + ' ' + subst);
+                }
+                else {
+                    console.log(nr + ' ' + subst);
+                }
+            }
+            pluralizeWord('cat', 2);
+            pluralizeWord('cat', 1);
+        </script>
+
+    </head>
+
+    <body>
+        <h1>JAVASCRIPT</h1>
+    </body>
+
+    </html>
+</DOCTYPE>
