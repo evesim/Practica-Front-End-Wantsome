@@ -50,10 +50,61 @@
                     console.log('Congrats, you have won a Mazda');
                 }
                     break;
-                default:{
+                default: {
                     console.log('You lost. Try again');
                 }
             }
+
+            //EX LOGIN
+            var user1 = {
+                name: {
+                    first: 'John',
+                    last: 'Doe',
+                },
+                gender: 'male',
+                title: 'NORMAL',
+                section: ['Account', 'Generic'],
+            }
+            var user2 = {
+                name: {
+                    first: 'Mike',
+                    last: 'Doe',
+                },
+                gender: 'male',
+                title: 'ADMIN',
+                section: ['Account', 'Generic', 'Dashboard', 'User Profiles'],
+            }
+            var user2 = {
+                name: {
+                    first: 'Chris',
+                    last: 'Doe',
+                },
+                gender: 'male',
+                title: 'UNKNOWN',
+                section: ['Account'],
+            }
+            function checkUserPermissions(user) {
+                var firstName = user.name.first;
+                var lastName = user.name.last;
+                var title = user.title;
+                var permissions = user.section.join(', ');
+                switch (title) {
+                    case 'NORMAL': {
+                        console.log(firstName + ', ' + lastName + ' has the  ' + title + ' title and has the permissions for ' + permissions);
+                    }
+                        break;
+                    case 'ADMIN': {
+                        console.log(firstName + ', ' + lastName + ' has the  ' + title + ' title and has the permissions for ' + permissions);
+                    }
+                        break;
+                    default: {
+                        console.log('Unknown user!');
+                    }
+                }
+            }
+            checkUserPermissions(user1); //normal
+            checkUserPermissions(user2); //admin
+            checkUserPermissions(user3); //unknown
         </script>
 
     </head>
