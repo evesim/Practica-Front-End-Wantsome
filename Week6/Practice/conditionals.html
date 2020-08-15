@@ -3,9 +3,57 @@
 
     <head>
         <meta charset="UTF-8" />
-        <title>Week 6, course 1</title>
+        <title>Week 6, course 2</title>
         <script>
+            //IF - used to execute a code if the condition is true 
+            var number = 7;
+            if (number > 2) {
+                console.log('Condition is done');
+            }
 
+            //ELSE - used when the same condition is false
+            var nr = 2;
+            if (number > 5) {
+                console.log('Condition is done');
+            } else {
+                console.log('Condition is not done');
+            }
+
+            var name = 'Marius';
+            var user = 'Marius';
+            if (name === user) {
+                console.log('Hello, ' + user + ' , welcome back!');
+            } else {
+                console.log('User is not authenticated correctly');
+            }
+
+            //ELSE IF - used when if is false to define a new condition
+            var number = -3;
+            if (number > 10) {
+                console.log(number + 'is bigger than 10');
+            } else if (number > 1) {
+                console.log(number + 'este mai mare decat 1');
+            } else if (number < 1) {
+                console.log(number + 'este mai mic decat 1');
+            } else {
+                console.log('Not interested');
+            }
+
+            //SWITCH - to specify more alternative code block according to the conditions
+            var car = 'Mazda';
+            switch (car) {
+                case 'Mazda': {
+                    console.log('Congrats, you have won a Mazda');
+                }
+                    break;
+                case 'Audi': {
+                    console.log('Congrats, you have won a Mazda');
+                }
+                    break;
+                default:{
+                    console.log('You lost. Try again');
+                }
+            }
         </script>
 
     </head>
