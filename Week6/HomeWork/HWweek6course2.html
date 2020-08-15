@@ -61,17 +61,24 @@
             //- adaugati cateva cazuri particulare pentru cuvinte precum “sheep” sau “geese” 
 
             function pluralizeWord(subst, nr) {
-                if (nr > 1) {
-                    console.log(nr + ' ' + subst + 's');
-                } else if ((subst == 'sheep')||(subst == "geese")) {
+                if (((subst == 'sheep') || (subst == 'geese')) && (nr > 1)) {
                     console.log(nr + ' ' + subst);
-                }
-                else {
+                } else if (nr > 1) {
+                    console.log(nr + ' ' + subst + 's');
+                } else {
                     console.log(nr + ' ' + subst);
                 }
             }
             pluralizeWord('cat', 2);
             pluralizeWord('cat', 1);
+            pluralizeWord('sheep', 2)
+
+            //4. Scrieti o functie care accepta ca argument venitul anual al unui angajat in dolari (ex: $30,000) si calculeaza taxa
+            //corespunzatoare considerand urmatoarele criterii:
+            //- daca angajatul castiga anual o suma mai mica de $30,000, taxa este 0%
+            //- daca venitul anual se situeaza intre $50,000 - $99,999, taxa calculata trebuie sa fie 35%
+            //- pentru venit mai mare de $100,000, taxa se calculeaza ca procentaj de 40%
+            //Returnati un text care sa aiba un format asemanator: “Pentru un venit anual de x, aveti de platit taxe in valoare de y”
         </script>
 
     </head>
