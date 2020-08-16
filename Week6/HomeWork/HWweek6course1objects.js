@@ -53,11 +53,23 @@ animal.describePet();
 // "Copiati" obiectul printr-o metoda specifica obiectelor(vedeti pe google) si stocatil intr-o alta variabila
 // Pe obiectul nou adaugam 2 noi proprietati
 // Avem obiectul de mai jos, folosind o metoda pe obiecte faceti "merge" intre cele 2 obiecte si salvati-l sub un nume nou.
-myHouse = {
+var myHouse = {
     rooms: 3,
     zone: "Bucium",
     animals: 1
 }
+
+var car = {
+    wheels: 4,
+    color: 'white',
+}
+var myCar = {}
+Object.assign(myCar, car); //deep copy from an object into another object
+myCar.doors = 5;
+myCar.seats = 6;
+console.log(myCar);
+var ultimateThing = Object.assign(myHouse, myCar);
+console.log(ultimateThing)
 
 // Ex5 
 // Creati un obiect care sa contina un alt obiect in interorul lui cu 2 proprietati
