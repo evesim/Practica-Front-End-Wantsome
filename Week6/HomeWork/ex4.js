@@ -16,3 +16,4 @@
         //array cars - nume [john,danny,bekker] - salariu [20000,30500,15000]
         //sortare.cars si functie de a si b in care returneaza salariul de la cel mai mic la cel mai mare
         //scrie cars
+        
