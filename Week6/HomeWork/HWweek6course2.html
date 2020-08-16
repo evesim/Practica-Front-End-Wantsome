@@ -171,12 +171,12 @@
                 }
             }
             console.log(gender('235488965'));
-                        //Pseudocod
-                        //functia gender(cnp)
-                        //sex <- primul caracter a lui cnp 
-                        //daca (sex <- 1) atunci returneaza "Persoana verificata este de sexul M"
-                        //altfel daca (sex <- 2) atunci returneaza "Persoana verificata este de sexul F"
-                        //scrie gender(parametru)
+            //Pseudocod
+            //functia gender(cnp)
+            //sex <- primul caracter a lui cnp 
+            //daca (sex <- 1) atunci returneaza "Persoana verificata este de sexul M"
+            //altfel daca (sex <- 2) atunci returneaza "Persoana verificata este de sexul F"
+            //scrie gender(parametru)
 
             //2. Scrieti o functie sub forma function expression care accepta ca argument o valoare numerica cuprinsa intre 1 si 10 si decide calificativul punctajului. Criteriile sunt urmatoarele:
             //- 1-3 = E
@@ -185,41 +185,106 @@
             //- 9 = A
             //- 10 = A+
             //Functia va returna un text de forma "Calificatul corespunzator punctajului [punctaj] este [calificativ]".
-            var calificativ= function(grade){
-                if (grade<=3) {
-                    return "Calificatul corespunzator punctajului "+ grade + " este " + "E";
-                }else if (grade<=6){
-                    return "Calificatul corespunzator punctajului "+ grade + " este " + "D";
-                }else if (grade<=8){
-                    return "Calificatul corespunzator punctajului "+ grade + " este " + "B";
-                }else if (grade==9){
-                    return "Calificatul corespunzator punctajului "+ grade + " este " + "A";
-                }else if(grade==10){
-                    return "Calificatul corespunzator punctajului "+ grade + " este " + "A+"
+            var calificativ = function (grade) {
+                if (grade <= 3) {
+                    return "Calificatul corespunzator punctajului " + grade + " este " + "E";
+                } else if (grade <= 6) {
+                    return "Calificatul corespunzator punctajului " + grade + " este " + "D";
+                } else if (grade <= 8) {
+                    return "Calificatul corespunzator punctajului " + grade + " este " + "B";
+                } else if (grade == 9) {
+                    return "Calificatul corespunzator punctajului " + grade + " este " + "A";
+                } else if (grade == 10) {
+                    return "Calificatul corespunzator punctajului " + grade + " este " + "A+"
                 }
             }
             console.log(calificativ(5));
-                        //Pseudocod
-                        // calificativ <- functie(grade)
-                        //daca(grade<=3) atunci returneaza { 
-                            //grade=1   "Calificatul corespunzator punctajului 1 este E".
-                            //grade=2   "Calificatul corespunzator punctajului 2 este E".
-                            //grade=3   "Calificatul corespunzator punctajului 3 este E".}
-                        //altfel daca(grade<=6) atunci returneaza { 
-                            //grade=4   "Calificatul corespunzator punctajului 1 este D".
-                            //grade=5   "Calificatul corespunzator punctajului 2 este D".
-                            //grade=6   "Calificatul corespunzator punctajului 3 este D".}
-                        //altfel daca(grade<=8) atunci returneaza { 
-                            //grade=7   "Calificatul corespunzator punctajului 1 este B".
-                            //grade=8   "Calificatul corespunzator punctajului 2 este B".}
-                        //altfel daca(grade=9) atunci returneaza { 
-                            //grade=9   "Calificatul corespunzator punctajului 1 este A"}
-                        //altfel daca(grade=10) atunci returneaza { 
-                            //grade=10   "Calificatul corespunzator punctajului 1 este A+"}
-                            
+            //Pseudocod
+            // calificativ <- functie(grade)
+            //daca(grade<=3) atunci returneaza { 
+            //grade=1   "Calificatul corespunzator punctajului 1 este E".
+            //grade=2   "Calificatul corespunzator punctajului 2 este E".
+            //grade=3   "Calificatul corespunzator punctajului 3 este E".}
+            //altfel daca(grade<=6) atunci returneaza { 
+            //grade=4   "Calificatul corespunzator punctajului 1 este D".
+            //grade=5   "Calificatul corespunzator punctajului 2 este D".
+            //grade=6   "Calificatul corespunzator punctajului 3 este D".}
+            //altfel daca(grade<=8) atunci returneaza { 
+            //grade=7   "Calificatul corespunzator punctajului 1 este B".
+            //grade=8   "Calificatul corespunzator punctajului 2 este B".}
+            //altfel daca(grade=9) atunci returneaza { 
+            //grade=9   "Calificatul corespunzator punctajului 1 este A"}
+            //altfel daca(grade=10) atunci returneaza { 
+            //grade=10   "Calificatul corespunzator punctajului 1 este A+"}
+
             // 3. Scrieti o functie care accepta ca argument numele marcii unei masini si returneaza un text de forma: "Marca [marca] se produce in [tara]".
             // Trebuie sa aveti macar 6 cazuri. In cazul in care functia nu recunoaste marca, va returna "Marca este necunoscuta. " 
             //Scrieti codul in 3 variante diferite. In declararea functiei trebuie sa se regaseasca o functie anonima. Una dintre implementari trebuie sa fie bazata pe Object Literals
+            //var1
+            var anonymus = function (marca) {
+                var cars = {
+                    Tesla: "America",
+                    BMW: "Germania",
+                    Skoda: "Cehia",
+                    Fiat: "Italia",
+                    Toyota: "Japonia",
+                    Dacia: "Romania"
+                }
+                if (cars[marca]) {
+                    return 'Marca ' + marca + ' se produce in ' + cars[marca];
+                } else {
+                    return "Marca este necunoscuta. ";
+                }
+            }
+            console.log(anonymus('tesla'));
+            //var2
+            var anonymus = function (marca) {
+                switch (marca) {
+                    case 'Tesla': {
+                        return "Marca " + marca + " se produce in America";
+                    }
+                    case 'BMW': {
+                        return "Marca " + marca + " se produce in Germania";
+                    }
+                    case 'Skoda': {
+                        return "Marca " + marca + " se produce in Cehia";
+                    }
+                    case 'Fiat': {
+                        return "Marca " + marca + " se produce in Italia";
+                    }
+                    case 'Toyota': {
+                        return "Marca " + marca + " se produce in Japonia";
+                    }
+                    case 'Dacia': {
+                        return "Marca " + marca + " se produce in Romania";
+                    }
+                    default: {
+                        return ("Marca este necunoscuta. ");
+                    }
+                }
+            }
+            console.log(anonymus('Tesla'));
+            //var3
+            var anonymus = function (marca) {
+                var country;
+                if (marca === 'Tesla') {
+                    return "Marca " + marca + " se produce in America";
+                } else if (marca === 'BMW') {
+                    return "Marca " + marca + " se produce in America";
+                } else if (marca === 'Skoda') {
+                    return "Marca " + marca + " se produce in America";
+                } else if (marca === 'Fiat') {
+                    return "Marca " + marca + " se produce in America";
+                } else if (marca === 'Toyota') {
+                    return "Marca " + marca + " se produce in America";
+                } else if (marca === 'Dacia') {
+                    return "Marca " + marca + " se produce in America";
+                } else {
+                    return ("Marca este necunoscuta. ")
+                }
+            }
+                console.log(anonymus('Tesla'));
+                    
         </script>
 
     </head>
