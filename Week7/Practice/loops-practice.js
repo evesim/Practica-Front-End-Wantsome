@@ -43,7 +43,7 @@ goOverArray(myArray);
 
 function goOverObject(myObj) {
     console.log(Object.values(myObj));
-    for (var i= 0; i < Object.values(myObj).length; i++) {
+    for (var i = 0; i < Object.values(myObj).length; i++) {
         console.log(Object.values(myObj)[i])
     }
 }
@@ -55,8 +55,8 @@ goOverObject(myObj);
 
 function goOverObject2(myObj) {
     for (var key in myObj) {
-        console.log (objInfo = myObj[key] + ",");
-        
+        console.log(objInfo = myObj[key] + ",");
+
     }
     //console.log(myObj[key]); //or this
 }
@@ -66,3 +66,67 @@ var myObj = {
 };
 goOverObject2(myObj);
 
+//1. 0 100 200 300 400 500 600 700 800 900 1000
+for (i = 0; i <= 1000; i = i + 100) {
+    console.log(i);
+}
+
+//2. 1 2 4 8 16 32 64 128
+var i=0;
+while(i<=7){
+    console.log(Math.pow(2,i));
+    i++;
+}
+
+//3. 0 2 4 6 8 10
+for (var i=0; i<=10;i++){
+    if(i%2 === 1){
+        continue;
+    }
+    console.log(i);
+}
+
+//4. 3 6 9 12 15
+for (var i=0; i<=10;i++){
+    if(i%2 === 0){
+        continue;
+    }
+    console.log(i);
+}
+
+//Implementati functia stream. Trebuie sa:
+//● accepte ca argumente 2 functii: conditionalFn, actionFn.
+//● apeleaza actionFn pana cand conditionalFn returneaza fals
+//● nu returneaza nimic
+
+function stream(condition, callback){
+    while (condition() === true){
+        callback();
+    }
+//Exemplu 1:
+conditionalFn = function() { return false; };
+actionFn = function() { console.log("Vreau sa ies la tabla!"); };
+stream(conditionalFn, actionFn); // Nu afiseaza nimic
+//Exemplu2:
+counter = 10;
+conditionalFn = function() {
+    counter--;
+    return counter >= 0;
+   };
+   stream(conditionalFn, actionFn); }// Afiseaza “Vreau sa ies la tabla” de 10 ori
+
+//Implementati functia computeSumOfArrayElements.
+//Trebuie sa:
+//● accepte ca argument un array format din numere
+//● returneze suma numerelor din array
+//● foloseasca instructiunea while
+function computeSumOfArrayElements(arr){
+    
+    while (i>0){
+    sum += arr[i];
+    }
+}
+//Exemplu 1:
+computeSumOfArrayElements([]); // returneaza 0
+//Exemplu 2:
+computeSumOfArrayElements([1,2,3,4]); // returneaza 10
