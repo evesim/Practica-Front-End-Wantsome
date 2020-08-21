@@ -54,7 +54,9 @@ while (i <= 10) {
 for (i = 1; i <= 10; i++) {
     ////loop function - for which will go from 1 to 10 with j being incremented +1
     for (j = 1; j <= 10; j++) {
+        //multiplication between i and j
         result = i * j;
+        //print the multiplication under the format i*j=(i*j)
         console.log(i + "*" + j + "=" + result + "\n");
     }
 }
