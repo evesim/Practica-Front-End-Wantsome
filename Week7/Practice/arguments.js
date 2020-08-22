@@ -14,7 +14,7 @@ var devideOperation = ["D", "imparire","devide"];
 
 function calculator(number1, number2, mathOperation) {
     var unifyMathOperation = detectMathOperation(mathOperation); //detect what kind of operation we need to do
-    if (type off unifyMathOperation === "function") {
+    if (typeof unifyMathOperation === "function") {
         return unifyMathOperation(number1, number2);
     }else {
         return "Operatia nu este declarata";
