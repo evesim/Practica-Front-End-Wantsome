@@ -191,3 +191,7 @@ testEx11("gartbpoc", "125")//false
 element al array-ului pana cand intalneste elementul cu valoarea specificata
 */
 myFunction([1, 2, 3, 4], 3)
+
+//13
+
+//14
