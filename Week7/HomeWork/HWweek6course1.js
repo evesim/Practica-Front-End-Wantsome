@@ -65,3 +65,26 @@ for (i = 1; i <= 10; i++) {
 //poate obtine pentru punctajele incepand de 1 la 10. (exemplu: “Pentru 2, obtii calificativul E. \n Pentru 7, obtii
 //calificativul B \n ...samd “). Atentie: Rezultatul calificativului trebuie sa fie obtinut prin utilizarea functiei
 //dezvoltate la tema anterioara ! 
+
+//this is the ex2
+//2. Scrieti o functie sub forma function expression care accepta ca argument o valoare numerica cuprinsa intre 1 si 10 si decide calificativul punctajului. Criteriile sunt urmatoarele:
+//- 1-3 = E
+//- 3-6 = D
+//- 7-8 = B
+//- 9 = A
+//- 10 = A+
+//Functia va returna un text de forma "Calificatul corespunzator punctajului [punctaj] este [calificativ]".
+var calificativ = function (grade) {
+    if (grade <= 3) {
+        return "Calificatul corespunzator punctajului " + grade + " este " + "E";
+    } else if (grade <= 6) {
+        return "Calificatul corespunzator punctajului " + grade + " este " + "D";
+    } else if (grade <= 8) {
+        return "Calificatul corespunzator punctajului " + grade + " este " + "B";
+    } else if (grade == 9) {
+        return "Calificatul corespunzator punctajului " + grade + " este " + "A";
+    } else if (grade == 10) {
+        return "Calificatul corespunzator punctajului " + grade + " este " + "A+"
+    }
+}
+console.log(calificativ(5));

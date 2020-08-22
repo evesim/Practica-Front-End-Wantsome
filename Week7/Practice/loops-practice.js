@@ -72,23 +72,23 @@ for (i = 0; i <= 1000; i = i + 100) {
 }
 
 //2. 1 2 4 8 16 32 64 128
-var i=0;
-while(i<=7){
-    console.log(Math.pow(2,i));
+var i = 0;
+while (i <= 7) {
+    console.log(Math.pow(2, i));
     i++;
 }
 
 //3. 0 2 4 6 8 10
-for (var i=0; i<=10;i++){
-    if(i%2 === 1){
+for (var i = 0; i <= 10; i++) {
+    if (i % 2 === 1) {
         continue;
     }
     console.log(i);
 }
 
 //4. 3 6 9 12 15
-for (var i=0; i<=10;i++){
-    if(i%2 === 0){
+for (var i = 0; i <= 10; i++) {
+    if (i % 2 === 0) {
         continue;
     }
     console.log(i);
@@ -99,34 +99,38 @@ for (var i=0; i<=10;i++){
 //● apeleaza actionFn pana cand conditionalFn returneaza fals
 //● nu returneaza nimic
 
-function stream(condition, callback){
-    while (condition() === true){
+function stream(condition, callback) {
+    while (condition() === true) {
         callback();
     }
-//Exemplu 1:
-conditionalFn = function() { return false; };
-actionFn = function() { console.log("Vreau sa ies la tabla!"); };
-stream(conditionalFn, actionFn); // Nu afiseaza nimic
-//Exemplu2:
-counter = 10;
-conditionalFn = function() {
-    counter--;
-    return counter >= 0;
-   };
-   stream(conditionalFn, actionFn); }// Afiseaza “Vreau sa ies la tabla” de 10 ori
+    //Exemplu 1:
+    conditionalFn = function () { return false; };
+    actionFn = function () { console.log("Vreau sa ies la tabla!"); };
+    stream(conditionalFn, actionFn); // Nu afiseaza nimic
+    //Exemplu2:
+    counter = 10;
+    conditionalFn = function () {
+        counter--;
+        return counter >= 0;
+    };
+    stream(conditionalFn, actionFn);
+}// Afiseaza “Vreau sa ies la tabla” de 10 ori
 
 //Implementati functia computeSumOfArrayElements.
 //Trebuie sa:
 //● accepte ca argument un array format din numere
 //● returneze suma numerelor din array
 //● foloseasca instructiunea while
-function computeSumOfArrayElements(arr){
-    
-    while (i>0){
-    sum += arr[i];
+function computeSumOfArrayElements(arr) {
+    var sum = 0;
+    var i = 0;
+    while (i < arr.length) {
+        sum = sum + arr[i];
+        i++;
     }
+    console.log(sum);
 }
 //Exemplu 1:
-computeSumOfArrayElements([]); // returneaza 0
+computeSumOfArrayElements([]); // returneaza 0f
 //Exemplu 2:
-computeSumOfArrayElements([1,2,3,4]); // returneaza 10
+computeSumOfArrayElements([1, 2, 3, 4]); // returneaza 10
