@@ -1,35 +1,169 @@
-/*
-6. Implementati o functie care accepta ca argument un array compus din mai multe array-uri de valori numerice si
-returneaza un array care contine ca si elemente cele mai mari numere din fiecare array
-*/
+//Ex1
+//Scrieti o functie care sa protejeze emailul unui user
+// de ex: myFunction("ovidiu.grigoras@test.com") sa printeze "ovidiu...@test.com" sau "ovid...@test.com"
 
-var myInputArray = [[1, 2, 3], [8, 9, 5], [52, 42, 21, -7, 3]];
-// [3,9,52]
+function myFunction(email) {
+    var termsArray = email.split("@");
+    console.log(termsArray[0].slice(0, 6) + "...@" + termsArray[1]);
+}
+myFunction("ovidiu.grigoras@test.com");
 
-/*
- declara finalArray
- parcurge myInputArray
-    declara o variabila X care contine array-urile din array
-    declara o variabila max undefined
-    parcurge array-ul X pentru a vede maximul
-     daca mx < x(i) atunci max = x[i]
-    punem max in finalArray //google: how to add a new elemt into an array
- print finallArray
-*/
+//Ex2
+//Scrieti o functie care sa faca uppercase la fiecare litera de la fiecare inceput de string
+// de ex: myFunction("i am superman") sa printeze "I Am Superman"
 
-/*
-8. Implementati o functie care calculeaza factorialul unui numar
-*/
-factorial(3);
-/*
- declara o variabila nr
- cream o functie factorial
-    declara variabila result
-    facem un for de la i=nr; i>=i; i--
-        result = result*i
-    return result
- apelam functia factorial cu varibila nr
-*/
+function myFunction(str) {
+    var stringToArray = str.split(" ");
+    var result = "";
+    for (i = 0; i < stringToArray.length; i++) {
+        result += stringToArray[i].slice(0, 1).toUpperCase().concat(stringToArray[i].slice(1)).concat(" ");
+    }
+    console.log(result);
+}
+myFunction("i am superman")
+
+//Ex3
+// Scrieti o functie care sa schimbe literele unui string daca sunt uppercase cu lowercase si invers
+// ex: myFunction("xxXyYzZZ") sa printeze "XXxYyZzz"
+
+function isUpperCaseAt(myVar, position) {
+    return myVar.charAt(position).toUpperCase() == myVar.charAt(position);
+}
+function myFunction(str) {
+    var finalString = "";
+    for (i = 0; i < str.length; i++) {
+        if (isUpperCaseAt(str, i) == false) {
+            finalString += str[i].toUpperCase();
+        } else {
+            finalString += str[i].toLowerCase();
+        }
+    }
+    console.log(finalString);
+}
+myFunction("xxXyYzZZ");
+
+//Ex4
+// Scrieti o functie care sa concateneze un string de cate ori ii zicem
+// de ex: myFunction("Wantsome", 2) sa printeze "WantsomeWantsome"
+
+function myfunction(str, count) {
+    var result = "";
+    for (i = 0; i < count; i++) {
+        result += str;
+    }
+    console.log(result);
+}
+myfunction("wantsome", 5);
+
+//Ex5
+// A palindrome is a word or a phrase that is the same whether you read it backward or forwards, for example, the word 'level'.
+// Scrieti o functie care verifica daca un string este palindrom; Implementati mai multe variante
+
+//var1
+function isPalindrome(str) {
+    if ((str == str.split('').reverse().join('')) == true) {
+        return "is palindrom";
+    } else {
+        return "is not palindrom";
+    }
+
+}
+console.log(isPalindrome("level"));
+
+//var2
+
+function isPalindrome(str) {
+    var flag = 0;
+    for (i = 0; i < str.length; i++) {
+        if (str[i] != str[str.length - i - 1]) {
+            flag = 1;
+            break;
+        }
+    }
+    console.log(flag);
+    if (flag === 0) {
+        return "is palindrome";
+    } else {
+        return "is not palindrome";
+    }
+}
+console.log(isPalindrome("level"));
+
+//Ex6
+// Implementati o functie care accepta ca argument un array compus din mai multe array-uri de valori numerice si returneaza un array care 
+//contine ca si elemente cele mai mari numere din fiecare array
+
+function myfunction(arr) {
+    var finalArray = [];
+    var arrayItems = [];
+    for (i = 0; i < arr.length; i++) {
+        //console.log(arr[i]);
+        arrayItems = arr[i];
+        var max = 0;
+        for (j = 0; j < arrayItems.length; j++) {
+            if (max < arrayItems[j]) {
+                max = arrayItems[j];
+            }
+        }
+        finalArray.push(max);
+    }
+    console.log(finalArray);
+}
+myfunction(myInputArray);
+
+//Ex7
+// Implementati o functie care face reverse la un string
+
+function reverseString(str) {
+    var result = str.split("");
+    return result.reverse().join("");
+}
+
+console.log(reverseString("hello"));
+
+
+//Ex8 
+// Implementati o functie care calculeaza factorialul unui numar
+
+function factorial(number) {
+    var result = 1;
+    for (i = number; i >= 1; i--) {
+        result = result * i;
+    }
+    console.log(result);
+}
+factorial(4);
+
+//Ex9
+// Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul se termina cu cel din urma
+
+function myFunction(firstStr, secondStr) {
+    var endFirstStrLast = firstStr.slice(firstStr.length - secondStr.length);
+    if (secondStr == endFirstStrLast) {
+        return "Se termina";
+    } else {
+        return "Nu se termina";
+    }
+}
+
+console.log(myFunction("Mama are mere", "mere"));
+
+
+//Ex10
+// Implementati o functie care accepta doua argumente: un array si o functie de adevar. Functia returneaza primul element din array care 
+//trece testul specificat
+
+function testFunction(nr) {
+    return nr % 2 === 0;
+}
+function myFunction(arr, testFunction) {
+    for (var i = 0; i < arr.length; i++) {
+        if (testFunction(arr[i]))
+            return arr[i];
+    }
+}
+console.log(myFunction([1, 2, 3, 4], testFunction));
+
 
 /*
 11. Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul string contine toate literele
@@ -49,37 +183,8 @@ testEx11("gartbpoc", "125")//false
         retur true
 */
 
-/*
-2. Scrieti o functie care sa faca uppercase la fiecare litera de la fiecare inceput de string
- de ex: myFunction("i am superman") sa printeze "I Am Superman"
-*/
-myFunction("i am superman") // print "I Am Superman"
-/*
- declara o funtie care accepta un string ca si parametru
-    impartim string-ul intr-un array (stringToArray) cu fiecare cuvant din proprozitie folosind split 
-    declara o variabila result ca si string gol
-    parcurgem stringToArray
-        //stringToArray[i] o sa fie pe rand "i", "am", "superman"
-        result = result.concat(stringToArray[i].slice(0,1).toUpperCase().concat(stringToArray[1].slice(i)))
-        result = result.concat(" ")    
-*/
 
-/*
-10. Implementati o functie care accepta doua argumente: un array si o functie de adevar. Functia returneaza primul
-element din array care trece testul specificat
-*/
 
-function testFunction(nr) {
-    return nr % 2 === 0;
-}
-function myFunction(arr, testFunction) {
-    for (var i = 0; i < arr.length; i++) {
-        if (testFunction(arr[i]))
-            return arr[i];
-    }
-}
-
-myfunction([1, 2, 3, 4], testfunction())
 
 /*
 12. Implementati o functie care accepta ca argumente doi parametri: un array si o valoare. Functia afiseaza fiecare
