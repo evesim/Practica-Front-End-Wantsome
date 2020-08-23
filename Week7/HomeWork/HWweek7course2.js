@@ -164,25 +164,33 @@ function myFunction(arr, testFunction) {
 }
 console.log(myFunction([1, 2, 3, 4], testFunction));
 
+//Ex11
+// Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul string contine toate literele celui de-al doilea 
+//string
 
-/*
-11. Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul string contine toate literele
-celui de-al doilea string
-*/
-testEx11("gartbpoc", "abc")//true
-testEx11("gartbpoc", "125")//false
-/*
-    declara o functie cu doua argumente string1 si string2
-        declara variabila string2ToArray care va fi un array cu toate caracterele din string2
-        //string1="gartbpoc"
-        //string2=["a","b","c"]
-        parcurgi string2ToArray
-            daca string2ToArray[i] nu se afla in string1
-                 continue
-             return false
-        retur true
-*/
+function verifCharacters(str1, str2) {
+    var string2ToArray = str2.split("");
+    var string1ToArray = str1.split("");
+    var flag = 0;
+    for (var i = 0; i < string2ToArray.length; i++) {
+        if (string1ToArray.includes(string2ToArray[i])) {
+            continue;
+        } else {
+            flag = 1;
+            break;
+        }
+    }
+    if (flag == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(verifCharacters("gartbpoc", "bpocscxvxcvxcv"));
 
+// Ex 12
+// Implementati o functie care accepta ca argumente doi parametri: un array si o valoare. Functia afiseaza fiecare element al array-ului pana 
+//cand intalneste elementul cu valoarea specificata
 
 
 
