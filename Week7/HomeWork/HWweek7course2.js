@@ -80,7 +80,6 @@ function isPalindrome(str) {
             break;
         }
     }
-    console.log(flag);
     if (flag === 0) {
         return "is palindrome";
     } else {
@@ -92,12 +91,11 @@ console.log(isPalindrome("level"));
 //Ex6
 // Implementati o functie care accepta ca argument un array compus din mai multe array-uri de valori numerice si returneaza un array care 
 //contine ca si elemente cele mai mari numere din fiecare array
-
+var myInputArray = [[1,3,5], [1,8,35], [125,89,69]]
 function myfunction(arr) {
     var finalArray = [];
     var arrayItems = [];
     for (i = 0; i < arr.length; i++) {
-        //console.log(arr[i]);
         arrayItems = arr[i];
         var max = 0;
         for (j = 0; j < arrayItems.length; j++) {
@@ -186,20 +184,47 @@ function verifCharacters(str1, str2) {
         return false;
     }
 }
-console.log(verifCharacters("gartbpoc", "bpocscxvxcvxcv"));
+console.log(verifCharacters("gartbpoc", "abpc"));
 
 // Ex 12
 // Implementati o functie care accepta ca argumente doi parametri: un array si o valoare. Functia afiseaza fiecare element al array-ului pana 
 //cand intalneste elementul cu valoarea specificata
 
+function findMyValue(arr, val) {
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i] !== val) {
+        console.log(arr[i])
+      } else {
+        break;
+      }
+    }
+  }
+  findMyValue(['abc5', 'eve', 33, 5, 8], 5)
 
+// Ex 13
+// Scrieti o functie care elimina toate valorile false dintr-un array: false, null, 0, "", undefined, NaN
 
-/*
-12. Implementati o functie care accepta ca argumente doi parametri: un array si o valoare. Functia afiseaza fiecare
-element al array-ului pana cand intalneste elementul cu valoarea specificata
-*/
-myFunction([1, 2, 3, 4], 3)
+var arr = [1, 4, undefined, 5, 0, 4, NaN, null, false, ""]
 
-//13
+function removeFalse(arr) {
+  var falseArr = [false, null, 0, undefined, NaN, ""];
+  for (i = 0; i < arr.length; i++) {
+    for (j = 0; j < falseArr.length; j++) {
+      if (arr[i] == falseArr[j] ||(isNaN(arr[i]) && typeof arr[i]=='number')) {
+        arr.splice(i, 1);
+      }
+    }
+  }
+}
+removeFalse(arr);
+console.log(arr)
 
-//14
+// Ex 14
+// Scrieti o functie care repeta un string de n ori specificate
+
+function repeatString(str, n) {
+    for (i = 0; i < n; i++){
+      console.log(str);
+    }
+  }
+  repeatString('ana are mere', 7)
