@@ -130,3 +130,34 @@ console.log([...str]);
 var b = [1, 12, 3, 5];
 var c = b.map(entry => entry * 2);
 console.log(c);
+
+//
+const car = {
+    model: "Fiesta",
+    brand: "Ford",
+    name: function () {
+        console.log(`${this.model} ${this.brand}`);
+    }
+}
+car.name();
+
+
+const car2 = {
+    model: "Fiesta",
+    brand: "Ford",
+    name: () => {
+        console.log(`${this.model} ${this.brand}`);
+    }
+}
+car2.name();
+
+const car3 = {
+    model: "Fiesta",
+    brand: "Ford",
+    name: function () {
+        setTimeout(() => {
+            console.log(`${self.model} ${self.brand}`);
+        }, 300);
+    }
+}
+car3.name();
