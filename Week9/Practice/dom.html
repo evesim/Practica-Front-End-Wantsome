@@ -4,11 +4,35 @@
     <head>
         <meta charset="UTF-8" />
         <title>Week 9, course 2 - DOM</title>
+        <style>
+
+        </style>
     </head>
 
     <body>
         <h1>DOM</h1>
-        <button type="button" onclick="changeBG">Change Background</button>
+        <button type="button" onclick="changeBg()">Change Background</button>
+
+        <h1 id='my-title'>This is my title</h1>
+        <button type="button" onclick="changeTitleBg()">Change Title Background</button>
+
+        <p class="my-text">Text 1</p>
+        <p class="my-text">Text 2</p>
+        <p class="my-text">Text 3</p>
+        <button type="button" onclick="changeTextBg()">Change Text Background</button>
+
+        <h2 id="today-status">Today is saturday</h2>
+        <button type="button" onclick="useQuerySelector()">Change Text Background</button>
+
+        <p class="new-t">Monday</p>
+        <p class="new-t">Tuesday</p>
+        <p class="new-t">Wednesday</p>
+        <button type="button" onclick="useQueryAll()">Change Text</button>
+        
+        <section>This is my section</section>
+        <article>This is my article</article>
+        <button type="button" onclick="useQueryAllByTags()">Change Text</button>
+    
     </body>
 
 
@@ -16,6 +40,47 @@
         const changeBg = () => {
             document.body.style.backgroundColor = "green";
         }
+        const changeTitleBg = () => {
+            const h1 = document.getElementById("my-title"); //will select the elemt with the specified Id
+            h1.style.backgroundColor = "red";
+            h1.style.color = "white";
+            console.log(h1);
+            h1.innerText = "Title has just changed"; //will change the text at the button click
+
+        }
+        const changeTextBg = () => {
+            const texts = document.getElementsByClassName("my-text"); //will select the elemt with the specified Id
+            console.log(texts);
+            texts[0].style.backgroundColor = "pink";
+            texts[1].style.backgroundColor = "red";
+            texts[2].style.backgroundColor = "yellow";
+        }
+            /*
+            for (let i = 0; i < texts.length ; i++){
+                texts[i].style.backgroundColor = "red";
+                console.log(texts[i].innerText);
+            }
+            */
+            const useQuerySelector = () => {
+                const element = document.querySelector("#today-status");
+                element.style.backgroundColor = "blue";
+            }
+            const useQueryAll = () => {
+                const elements = document.querySelectorAll(".new-t");
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.color = "red";
+                    elements[i].innerText = "Text changed on click";
+                }
+            }
+            const useQueryAllByTags = () => {
+                const elements = document.querySelectorAll("section, article");
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.color = "#ff0066";
+                }
+
+                const elems = document.getElementsByTagName("section");
+                elems[0].style.color = "lime";
+            }
     </script>
 
     </html>
