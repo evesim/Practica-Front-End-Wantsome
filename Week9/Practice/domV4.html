@@ -10,11 +10,25 @@
     </head>
 
     <body>
-        <img src = "https://image.jimcdn.com/app/cms/image/transf/dimension=681x10000:format=jpg/path/s177e625e77f51f75/image/i6941d265499d3f00/version/1559841335/abstract-art.jpg" width="300px" height="auto">
-    <script>
-         const image = document.querySelector("img");
-         console.log(image.hasAttribute("alt"));
-    </script>
+        <h2 style="color: green"> This will change</h2>
+
+        <img alt="Abstract"
+            src="https://image.jimcdn.com/app/cms/image/transf/dimension=681x10000:format=jpg/path/s177e625e77f51f75/image/i6941d265499d3f00/version/1559841335/abstract-art.jpg"
+            width="300px" height="auto">
+        <script>
+            const image = document.querySelector("img");
+            console.log(image.hasAttribute("alt"));
+            console.log(image.getAttribute("src"));
+            //image.removeAttribute("alt");
+            console.log(image);
+
+            setTimeout(() => image.setAttribute("src", "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/energized--abstract-art-by-fidostudio-tom-fedro--fidostudio.jpg"), 1000);
+            
+            const text = document.querySelector("h2");
+            text.setAttribute("style", "font-size: 40px");
+        
+        </script>
     </body>
+
     </html>
 </DOCTYPE>

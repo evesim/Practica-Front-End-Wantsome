@@ -1,0 +1,46 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Week 9, course 2 - DOM Change</title>
+        <style>
+            .active {
+                border: 3px solid greenyellow;
+            }
+
+            .alert {
+                border: 3px solid red;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            div {
+                border: 3px solid grey;
+                padding: 15px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>Div #1 </div>
+        <div class="active">Div #2</div>
+        <script>
+            const div = document.querySelector("div");
+            div.className = "alert";
+
+            const secondDiv = document.querySelector(".active");
+
+            const toggleClass = () => {
+                //secondDiv.classList.toggle("hidden");
+                secondDiv.classList.replace("active", "alert");
+            }
+
+        </script>
+    </body>
+
+    </html>
+</DOCTYPE>
