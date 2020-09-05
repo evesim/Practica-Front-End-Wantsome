@@ -23,7 +23,8 @@
         const paragraph = document.createElement("p");
         paragraph.textContent = "Hello fro the other side";
         paragraph.innerHTML = "Hello from <strong> the other </strong> side"; // use html tags in js
-  
+        
+        //ADD A NEW ITEM TO OUR LIST
         const list = document.querySelector("ul");
         const newListItem =  document.createElement("li"); //create a new elemnts
         newListItem.textContent = "Portocala";
@@ -32,12 +33,20 @@
 
         list.appendChild(newListItem); //will push this elements into the page at the end of it
 
+        //ADD A NEW ELEMENT TO OUR LIST ON A SPECIFIC POSITION
         const listItem2 = document.createElement("li");
         listItem2.textContent = "Mere";
+        //list.insertBefore(listItem2, list.firstElementChild);
+        list.insertBefore(listItem2, list.children[0]); //or other values like 1 2 3
 
-        list.insertBefore(listItem2, list.firstElementChild);
+        //MODIFY LIST ITEM
+        const modifiedItem = document.createElement("li");
+        modifiedItem.textContent = "Un alt fruct";
 
-  
+        list.replaceChild(modifiedItem, list.children[1]);
+
+        //REMOVE ITEM FROM A SPECIFIED POSITION
+        list.removeChild(list.list.children[1]); 
   </script>
 
     </html>
