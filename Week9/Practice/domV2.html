@@ -19,9 +19,23 @@
 
 
     <script>
-        const ul = document.getElementsByTagName("ul");
+        const ul = document.getElementsByTagName("ul")[0];
         console.log(ul.childNodes);
-    </script>
+        console.log(ul.children); //return the all li
+        console.log(ul.firstElementChild); //return first element from the list with his value
+        
+        const middleElement = ul.firstElementChild.nextElementSibling; //will show the middle child
+        console.log(middleElement);
+        const firstElement = middleElement.previousElementSibling; //will show the first one in this case
+        console.log(firstElement);
+        const lastElement = middleElement.nextElementSibling; //will show the last one in this case
+        console.log(lastElement);
+   
+        firstElement.style.color = "red";
+        middleElement.style.color = "blue";
+        lastElement.style.color = "lime";
+        //const middleElement = ul.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling ....
+   </script>
 
     </html>
 </DOCTYPE>

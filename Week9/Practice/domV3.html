@@ -1,0 +1,44 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Week 9, course 2 - DOM Change</title>
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <p>This is element</p>
+
+        <ul>
+            <li>Banane</li>
+            <li>Struguri</li>
+        </ul>
+    </body>
+
+
+    <script>
+        const paragraph = document.createElement("p");
+        paragraph.textContent = "Hello fro the other side";
+        paragraph.innerHTML = "Hello from <strong> the other </strong> side"; // use html tags in js
+  
+        const list = document.querySelector("ul");
+        const newListItem =  document.createElement("li"); //create a new elemnts
+        newListItem.textContent = "Portocala";
+
+        console.log(newListItem);
+
+        list.appendChild(newListItem); //will push this elements into the page at the end of it
+
+        const listItem2 = document.createElement("li");
+        listItem2.textContent = "Mere";
+
+        list.insertBefore(listItem2, list.firstElementChild);
+
+  
+  </script>
+
+    </html>
+</DOCTYPE>
