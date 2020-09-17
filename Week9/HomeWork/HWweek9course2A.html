@@ -1,0 +1,42 @@
+// Adaugati un tag script la final
+// Schimbati stilul body-ului sa aiba font-family "Arial, sans-serif"
+// Schimbati fiecare span(name, fav-drink, born-place) cu informatiile despre voi
+// Iterati prin fiecare "li" si puneti clasa "listitem". Adaugati un tag style(in head) care seteaza o regula pentru .listitem sa aiba culoarea rosie
+// Creati un element img si setati atributul src sa aiba o poza cu voi sau ceva random de pe net. Puneti acest element(append) la pagina noastra
+<html>
+
+<title>Despre mine</title>
+
+<head>
+    <style>
+        .listitem {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Despre mine</h1>
+
+    <ul>
+        <li>Nume: <span id="name"></span>
+        <li>Bautura Favorita: <span id="fav-drink"></span>
+        <li>Locul nasterii: <span id="born-place"></span>
+    </ul>
+
+</body>
+<script>
+    document.getElementsByTagName('body')[0].style.fontFamily = "Arial, sans-serif";
+    document.getElementById('name').textContent = 'Razvan'
+    document.getElementById('fav-drink').textContent = 'Apa'
+    document.getElementById('born-place').textContent = 'Roman'
+    let liItems = document.getElementsByTagName('li');
+    for (let i = 0; i < liItems.length; i++)
+        liItems[i].classList.add("listitem");
+
+    var img = document.createElement('img');
+    img.src = 'https://s13emagst.akamaized.net/products/715/714450/images/res_c5aa00d9e049521a773655bffc5f37c7.jpg';
+    document.body.appendChild(img);
+</script>
+
+</html>

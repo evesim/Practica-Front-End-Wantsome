@@ -1,0 +1,69 @@
+// Creati o pagina web care are un h1 cu "Book List"
+// adugati un script style unde sa tinem js-ul
+//Iterati fiecare carte si pentru fiecare creati un p care sa contina titlul si autorul si faceti append in pagina noastra
+//BONUS: folositi ul si li pentru a face display la carti
+//BONUS: adaugati o proprietate pentru fiecare carte cu URL de la coverul cartii si adaugati un element img pentru fiecare (nu uitati sa adaugati img-ul si pe obiectul cartii - acolo va fi si poza)
+//BONUS: schimbati style-ul pentru fiecare carte in functie daca a fost citita sau nu.
+
+<html>
+
+<title>Books list</title>
+
+<head>
+    <style>
+        .listitem {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Books list</h1>
+
+</body>
+<script>
+    const books = [
+        {
+            title: 'The Power of Habit',
+            author: 'Charles Duhigg',
+            read: true
+        },
+        {
+            title: 'Mindset: The New Psychology of Success',
+            author: 'Carol S. Dweck',
+            read: false
+        }];
+
+    for (let book of books) {
+        var p = document.createElement('p');
+        p.textContent = book.title + ' ' + book.author;
+
+        if (book.read)
+            p.style.color = 'green';
+        else
+            p.style.color = 'red';
+        document.body.appendChild(p);
+    }
+
+
+    var ul = document.createElement('ul');
+
+    for (let book of books) {
+        var p = document.createElement('p');
+        p.textContent = book.title + ' ' + book.author;
+        if (book.read)
+            p.style.color = 'green';
+        else
+            p.style.color = 'red';
+        var li = document.createElement('li');
+        li.append(p);
+        ul.appendChild(li);
+    }
+    document.body.appendChild(ul);
+
+
+
+</script>
+
+</html>
