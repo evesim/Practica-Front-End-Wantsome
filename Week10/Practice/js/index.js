@@ -26,4 +26,5 @@ const onPageLoad = () => {
     console.log(document.getElementById("userWelcome"));
 }
 
-onLogOut();
+const logOutBtnE1 = document.getElementById("logOutBtn");
+logOutBtnE1.addEventListener("click", onLogOut); //??

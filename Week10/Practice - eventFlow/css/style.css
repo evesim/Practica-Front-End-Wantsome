@@ -1,0 +1,14 @@
+div{
+    width: 100%;
+    padding: 75px;
+}
+
+.firstDiv{
+    background-color: aqua;
+}
+.secondDiv{
+    background-color: brown;
+}
+.thridDiv{
+    background-color: gold;
+}
