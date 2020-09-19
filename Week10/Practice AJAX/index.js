@@ -12,10 +12,10 @@
 const addContent = () => {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = () => {
-        if (xhttp.readyState === 4 && xhttp === 200) {
+        if (xhttp.readyState === 4 && xhttp.status === 200) {
             console.log(xhttp);
             renderResponseIntoDOM(xhttp.responseText)
-        } else if (xhttp.readyState === 4 && xhttp === 404) {
+        } else if (xhttp.readyState === 4 && xhttp.status === 404) {
             console.log("Pagina cautata nu exista");
         }
 
