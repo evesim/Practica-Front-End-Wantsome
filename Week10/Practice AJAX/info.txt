@@ -1,0 +1,2 @@
+<h1>Content pe server</h1>
+<p>This is AJAX</P>
