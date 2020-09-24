@@ -1,0 +1,11 @@
+.color-row{
+    display: flex;
+    align-items:center
+}
+.color{
+    width: 10px;
+    height: 10px;
+}
+.color-text{
+    margin-left: 10px;
+}
