@@ -1,0 +1,101 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Functional Programming</title>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+    </body>
+    <script>
+        //PURE FUNCTIONS
+        function adds2(x) {
+            return x + 2
+        }
+
+        //IMPURE FUNCTIONS
+        // const y = 2;
+        // const adder = (x) => {
+        //     return x + y;
+        // }
+
+        // console.log(adder(4))
+
+        //FUNCTION COMPOSITION
+        const add2 = (x) => {
+            x + 2;
+        }
+        const times2 = (y) => {
+            y * 2;
+        }
+        console.log(add2(times2(2))); //6
+        console.log(times2(add2(2))); //8
+
+        //IMMUTABILITY
+        const person = {
+            name: 'Mike',
+            age: 22,
+        }
+        console.log({ person });
+        //person.name = 'Jane';
+
+        console.log({ person });
+
+        const newPerson = {
+            ...person,      // spread the atributes
+            name: 'John',
+            gender: 'male',
+        }
+
+        console.log({ newPerson });
+
+
+        const unspreaded = {
+            newPerson,
+        }
+
+        console.log({ unspreaded });
+
+        const spreaded = {
+            ...newPerson,
+        }
+
+        console.log({ spreaded });
+
+        //OBJECT FREEZE
+        const obj = Object.freeze({  //can be read, but cannot be overwritten
+            name: 'Marius',
+            age: 22,
+            gender: 'male',
+        });
+
+        obj.name = 'Emilia';
+        console.log(obj);
+
+        //MAP EXERCISES
+        //ex1
+        const arr = ["john", "JACOB", "jinGleHeimer", "schmidt"];
+        const capitalizeNames = (array) => {
+            array.map(name => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase());
+        }
+        console.log(capitalizeNames(arr));
+        // ["John", "Jacob", "Jingleheimer", "Schmidt"]
+
+        //ex2
+        const number = [2, "5", 100, "100", "blalblala"];
+        const doubleEachNumber = (numbers) => {
+            const doubled = numbers.map(element => {
+                if (Number.isInteger(element)) {
+                    return element * 2;
+                } else {
+                    return element;
+                }
+            });
+        }
+        console.log(doubleEachNumber(numbers))
+    </script>
+
+    </html>
+</DOCTYPE>
