@@ -13,7 +13,7 @@
 // 	- Actiune: afiseazaBiografie //"XXXXX in varsta de YYYY are hobby-urile ZZZZZZ"
 
 // Elev > Oameni
-// 	- Teme: array og string
+// 	- Teme: array of string
 // 	- Note: list of numbers
 // 	- Actiune: salut //"Buna ziua, sunt XXXXX"
 // 	- Actiune: showsGrade //"Notele lui XXXXX sunt YYYY"
@@ -23,7 +23,7 @@
 // 	- Actiune: salut //"Buna ziua, sunt domnul/doamna (nume de familie) XXX si predau YYY"
 // 	- Actiune: evaluare // Chooses a random number from 1 to 10 and returns to an elev X the grade
 
-function People(firstName, lastName, age, sex, hoobies,) {
+function People(firstName, lastName, age, sex, hoobies) {
     this.name = {
         firstName: firstName,
         lastName: lastName,
@@ -40,7 +40,23 @@ function People(firstName, lastName, age, sex, hoobies,) {
     }
 }
 
-const evelina = new People("Evelina", "Simion", 24, "M", ["music", "reading"]);
+const evelina = new People("Evelina", "Simion", 24, "F", ["music", "reading"]);
 evelina.presentYourself();
 evelina.showBiography();
 
+function Students(homework, grades) {
+    this.homework = homework;
+    this.gardes = grades;
+
+    this.presentYourself = () => {
+        console.log(`Buna ziua! Sunt //people(firstName)`);
+    }
+
+    this.showGrades = () => {
+        console.log(`Notele lui //people(firstName sunt ${this.gardes} `);
+    }
+}
+
+function Teachers(className) {
+    this.className = className;
+}
