@@ -84,7 +84,7 @@ function isEmailValid(email) {
 }
 
 function isPhoneValid(phone) {
-    if (phone.length < 10)
+    if ((phone.length < 10)||(phone.length > 10))
         return false;
 
     for (var i = 0; i < phone.length; i++) {
