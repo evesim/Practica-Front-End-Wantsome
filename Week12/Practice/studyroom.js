@@ -51,11 +51,10 @@ function People(firstName, lastName, age, sex, hoobies) {
     this.hoobies = hoobies;
 }
 
-People.prototype.presentYourself = () => {
+People.prototype.presentYourself = function() {
     console.log(`Salut! Sunt ${this.name.firstName}`);
 }
-
-People.prototype.showBiography = () => {
+People.prototype.showBiography = function() {
     console.log(`${this.name.lastName}${this.name.firstName} in varsta de ${this.age} are hobby-urile ${this.hoobies} `);
 }
 
@@ -69,7 +68,7 @@ function Student(firstName, lastName, age, sex, hoobies, homework, grades) {
     People.call(this, firstName, lastName, age, sex, hoobies); // call the atributes from people - call parent constructor
     this.homework = homework;
     this.gardes = grades;
-
+}
     Student.prototype = Object.create(People.prototype) //set parent prototype
     Student.prototype.constructor = Student; //reasign the constructor
 
@@ -80,7 +79,7 @@ function Student(firstName, lastName, age, sex, hoobies, homework, grades) {
         console.log(`Notele lui ${this.name.firstName} ${this.name.lastName} sunt ${this.grades}`);
         console.log(`Ultima nota a fost ${this.grades[this.grades.length - 1]}`)
     }
-}
+
 
 function Teacher(firstName, lastName, age, sex, hoobies, className) {
     People.call(this, firstName, lastName, age, sex, hoobies); // call the atributes from people - call parent constructor
