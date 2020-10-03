@@ -80,6 +80,42 @@ Truck.prototype.constructor = Truck;
 var truck1 = new Truck("Maria");
 console.log(truck1.drive(15));
 
+//es6
+// class Vehicle{
+//     constructor(driver){
+//       this.driver = driver;
+//     };
+  
+//     drive(mph){
+//       this.speed = mph;
+//       return this.driver + ' driving at ' + mph + ' miles per hour'
+//     }
+//   }
+  
+//   class Car extends Vehicle{
+//     constructor(driver){
+//       super(driver);
+//     }
+//   }
+  
+//   class Truck extends Vehicle{
+//     constructor(driver, cargo){
+//       super(driver);
+//       this.cargo = [];
+//     }
+  
+//      loadCargo(cargo) {
+//           this.cargo.push(cargo);
+//           return this;
+//       }
+  
+//      unloadCargo () {
+//           return this.cargo.pop();
+//       };
+//   }
+  
+//   var truck1 = new Truck("Maria");
+//   console.log(truck1.drive(15));
 
 
 //ex2
@@ -106,9 +142,29 @@ firstTeacher.initialize("Ana", 25)
 
 console.log(firstTeacher.teach("English"))
 
+//es6
+// class Person{
+//     initialize(name,age){
+//       this.name = name;
+//       this.age = age;
+//     }
+//   }
+  
+//   class Trainer extends Person{
+//     teach(subject){
+//       console.log(`${this.name} is now teaching ${subject}`)
+//     }
+//   }
+  
+//   var firstTeacher = new Trainer();
+//   firstTeacher.initialize("Ana", 25)
+  
+//   console.log(firstTeacher.teach("English"))
 
 // Creati un obiect numit Trainer care sa fie derivat din obiectul Person si implementati o metoda teach() ce primeste un string numit subject si printeaza
 // [nume trainer] is now teaching [subject]
+
+
 
 //ex3
 // triunghi.constructor;                 // Triangle(a, b, c)   
