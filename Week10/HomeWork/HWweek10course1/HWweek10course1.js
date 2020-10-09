@@ -1,5 +1,5 @@
         document.getElementById("next-button").addEventListener("click", function () {
-        let validForm = true;
+        let validForm = true; //flag pe true in caz ca ceva nu e valid din inputuri il pune pe false
 
         let username = document.getElementById("username-input").value;
 
@@ -52,16 +52,16 @@
 
         var optionsValue =  document.querySelectorAll("input[name='options']:checked")[0].value;
 
-        //validate the form
-        // if (validForm) {
-        //     let output = '';
-        //     if (optionsValue == 'site') {
-        //         output = `http://${firstName}_${lastName}.com`;
-        //     } else {
-        //         output = `${firstName}.${lastName}`
-        //     }
-        //     alert(output);
-        // }
+       // validate the form
+        if (validForm) {
+            let output = '';
+            if (optionsValue == 'site') {
+                output = `http://${firstName}_${lastName}.com`;
+            } else {
+                output = `${firstName}.${lastName}`
+            }
+            alert(output);
+        }
 
 
     });
@@ -84,7 +84,7 @@ function isEmailValid(email) {
 }
 
 function isPhoneValid(phone) {
-    if ((phone.length < 10)||(phone.length > 10))
+    if ((phone.length < 10)||(phone.length > 10))  //if typeof(phone)!=number
         return false;
 
     for (var i = 0; i < phone.length; i++) {

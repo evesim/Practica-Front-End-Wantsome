@@ -1,0 +1,140 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Functional Programming</title>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+    </body>
+    <script>
+
+        //RESOLVED
+        let promise = new Promise(function (resolve, reject) {
+            // the function is executed automatically when the promise is constructed
+            // after 1 second signal that the job is done with the result "done"
+            setTimeout(() => resolve("done"), 1000);
+        });
+
+        console.log(promise);
+
+        //REJECTED
+        let promise = new Promise(function (resolve, reject) {
+            // the function is executed automatically when the promise is constructed
+            // after 1 second signal that the job is done with the result "done"
+            setTimeout(() => reject(new Error("Whoops")), 1000);
+        });
+
+        console.log(promise);
+
+        //PROMISE CONSUMERS
+        let promise = new Promise(function (resolve, reject) {
+            // the function is executed automatically when the promise is constructed
+            // after 1 second signal that the job is done with the result "done"
+            setTimeout(() => resolve("done"), 1000);
+        });
+
+        promis.then(
+            (result => alert(result)), // shows "done" after 1 sec
+            (error => alert(error)) // doesn't run
+        );
+        console.log(promise);
+
+        //ES6
+        const promise2 = new Promise((resolve, reject) => {
+            setTimeout(() => resolve("ES6 IS THE NEW WAY"), 1000);
+            // setTimeout(() => reject(new Error("ES6 whoops"),1000);
+        }).then(
+            (result) => alert(result),
+            (error) => alert(error)
+        );
+
+        const promise3 = new Promise((resolve, reject) => {
+            setTimeout(() => resolve("ES6 IS THE NEW WAY"), 1000);
+            // setTimeout(() => reject(new Error("ES6 whoops"),1000);
+        }).then(result => alert(result))
+            .finally(() => alert("The promise is done"))
+            .catch(error => alert(error));
+
+        //EX1
+        //Creati o functie care primeste un numar ca si argument si returneaza un Promise care testeaza daca valoarea este
+        // mai mica sau mai mare decat 10 - se va face reject / resolve in functie de valoarea de adevar a conditiei de
+        // comparatie.
+        // Apelati functia si folositi consumatorii then si catch pentru a trata ambele cazuri
+
+        const compareNumbers = (number) =>
+            new Promise((resolve, reject) => {
+                setTimeout(() => resolve(number > 10), 1000);
+            }).then(result => alert(result))
+                .catch(error = alert(error));
+
+        compareNumbers(13);
+
+        //EX2
+        //Creati o functie care primeste un string ca si argument si returneaza un Promise care testeaza daca acesta contine
+        // sau nu cuvantul “promise” - se va face reject / resolve in functie de valoarea de adevar a conditiei specificate.
+        // Apelati functia si folositi consumatorii then si catch pentru a trata ambele cazuri.
+
+        const checkString = (value) =>
+            new Promise((resolve, reject) => {
+                setTimeout(() => resolve(value.includes('promise')), 1000)
+            }).then(result => alert(result))
+                .catch(error = alert(error));
+
+        // checkString('This is my promise');
+        // checkString('This is something else');
+        // checkString(12);
+
+        //EX3
+        // Creati o functie care primeste un singur parametru si returneaza un Promise. Folosind setTimeout, dupa 500ms,
+        // acest Promise fie va face resolve, fie va face reject, in functie de urmatoarele cazuri: daca input-ul este un string,
+        // Promise-ul se va rezolva cu rezultatul avand valoarea string-ului uppercased; daca input-ul nu este un string,
+        // Promise-ul va face reject cu rezultatul avand valoarea string-ului fara nicio modificare.
+        // Apelati functia si folositi consumatorii then si catch pentru a trata ambele cazuri
+
+        const validateType = (value) =>
+            new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (typeof value === 'string') {
+                        resolve(value.toUpperCase())
+                    } else {
+                        reject(value);
+                    }
+                }, 500)
+            }).then(result => alert(result))
+                .catch(error = alert(error));
+
+        //validateType('ploaie');
+        //validateType(25);
+        //validateType({ number: '23' })
+
+        //CHAINED PROMISE
+        const myChainedPromise = new Promise((resolve, reject) => {
+            setTimeout(() => resolve(2), 500);
+        }).then(result => {
+            alert(`result is ${result}`);
+            return `result is ${result * 2}`;
+        }).then(result => {
+            alert(result);
+            return result * 2;
+        }).then(result => {
+            alert(result);
+        }).catch(error => error);
+
+        //EXbonus
+
+        const anotherChain = new Promise((resolve, reject) => {
+            setTimeout(() => resolve ('Ana') , 1000);
+        }).then(result => {
+            alert(result);
+            return `${result} are`;
+        }).then(result => {
+            alert(result);
+            return `${result} mere!`;
+        }).then(result => alert(result));
+    </script>
+
+    </html>
+</DOCTYPE>
