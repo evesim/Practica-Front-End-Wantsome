@@ -1,0 +1,78 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <title>API fetch</title>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+    </body>
+    <script>
+        const fetchExample = () => {
+            fetch('http://example.com/movies.json').then(function (response) {
+                return response.json();
+            }).then(function (myJson) {
+                console.log(JSON.stringify(myJson));
+            });
+        }
+
+        //EX1
+        //Folosind fetch() prima data returnam userii cu id-ul mai mare ca 5
+        //.then - returnam user names si city
+        //hint nu uitati sa transformati primul raspuns ca si json
+
+        const url = "https://jsonplaceholder.typicode.com/users";
+        const fetchUsers = async (url) => {
+            const users = await fetch(url)
+                .then(response => response.json())
+                .then(response => response.filter(({ id }) => id > 5))
+                // .then(response => response.map(({ name, address: { city } }) => ({ name, city })));
+                .then(response => response.map(user => {
+                    return {
+                        name: user.name,
+                        city: user.address.city,
+                        workAt: user.company.name,
+                        location: {
+                            latitudine: user.address.geo.lat,
+                            longitudine: user.address.geo.lng,
+                        },
+                        // userKey: index,
+                        motto: `${user.name}'s motto in life is ${user.company.catchPhrase}`,
+                    };
+                })
+                );
+            console.log(users);
+        };
+        fetchUsers(url)
+
+        //EX2
+        // PRE: vom implementa metoda separat si apoi o importam in index.js
+        // folosind fetch() vom face un post catre url-ul de mai jos
+        // trebuie sa completati in options ce metoda folosim, ce punem in body si ce punem in headers.
+        const sendUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+        const sendDataToServer = (url) => {
+            const myPost = {
+                title: 'Javascript Post is awesome',
+                body: 'lorem ipsum etc',
+                userId: 1,
+            }
+            const options = {
+                method: "POST",
+                body: JSON.stringify(myPost),
+                headers: { 'Content-type': 'application/json' },
+            };
+
+            fetch(url, { ...options })
+                .then((response) => response.json())
+                .then((response) => console.log(response));
+        }
+
+        sendDataToServer(sendUrl)
+
+    </script>
+
+    </html>
+</DOCTYPE>

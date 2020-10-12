@@ -1,0 +1,67 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Cookies, Local Storage, Session Storage</title>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+    </body>
+    <script>
+        //LOCAL STORAGE
+        const saveToLocalStorage = (key, value) => {
+            localStorage.setItem(key, value);
+        }
+        saveToLocalStorage("username", "Evelina");
+        saveToLocalStorage("email", "evelina@bla.com");
+        saveToLocalStorage("username", "Razvan");
+
+
+        const getFromLocalStorage = (key) => {
+            const value = localStorage.getItem(key);
+            console.log(value)
+        }
+        getFromLocalStorage("username");
+        getFromLocalStorage("email");
+
+        localStorage.removeItem("email"); // removes one specific items from local storage
+        setTimeout(() => localStorage.clear(), 3000); // removes all items from local storage
+
+        //SEESION STORAGE
+
+        const saveToSeesionStorage = (key, value) => {
+            sessionStorage.setItem(key, value);
+        }
+        saveToSeesionStorage("today", "Sambata");
+        saveToSeesionStorage("tomorrow", "Duminica");
+
+        const getFromSessionStorage = (key) => {
+            const value = sessionStorage.getItem(key);
+            console.log(value)
+        }
+        getFromSessionStorage("today");
+        getFromSessionStorage("tomorrow");
+
+        sessionStorage.removeItem("today"); // removes one specific items from local storage
+        setTimeout(() => sessionStorage.clear(), 3000); // removes all items from local storage
+
+        //COOKIES
+
+        const setCookies = () => {
+            const date = new Date();
+            date.setTime(date.getTime() + 30 * 1000)
+            
+
+            console.log({ date });
+            document.cookie = `myUsername=TheOne, expires=${date}`;
+            const cook = document.cookie;
+            console.log
+        }
+
+        setCookies();
+    </script>
+
+    </html>
+</DOCTYPE>
