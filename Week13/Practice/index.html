@@ -36,7 +36,7 @@
             setTimeout(() => resolve("done"), 1000);
         });
 
-        promis.then(
+        promise.then(
             (result => alert(result)), // shows "done" after 1 sec
             (error => alert(error)) // doesn't run
         );

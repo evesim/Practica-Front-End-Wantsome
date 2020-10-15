@@ -1,0 +1,167 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Promises</title>
+        <meta charset="UTF-8" />
+        <script src="./index.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+
+    </body>
+    <script>
+        //Ex1. 
+        //Setati 3 cookie-uri cu numele, profesia si varsta voastra
+        //Stocatile in 3 variabile dupa si afisatile in consola
+        //Setati 2 cookie-uri (cu ce valori vreti voi) care sa expire la un momendat
+        // Stocatile si pe astea in alte 2 variabile
+        // La final vrem sa vedem 5 cookieuri in console.log
+
+        const setCookies = () => {
+            document.cookie = `name=Evelina`;
+            document.cookie = `profession=whoKnows`;
+            document.cookie = `age=24`;
+            document.cookie = `username=John Doe; expires=Thu, 18 Dec 2021 12:00:00 UTC`;
+            document.cookie = `birthday=09.06.1996; expires=Thu, 18 Dec 2021 12:00:00 UTC`;
+
+
+            const cook1 = document.cookie;
+
+            let name = getCookie("name");
+            let profession = getCookie("profession");
+            let age = getCookie("age");
+            let username = getCookie("username");
+            let birthday = getCookie("birthday");
+            console.log(name);
+            console.log(profession);
+            console.log(age);
+            console.log(username);
+            console.log(birthday);
+            console.log(cook1);
+
+        }
+
+        setCookies();
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        //Ex2. 
+        //Stocati in localStorage urmatoarele chei si valori ("width" "100px") ("height" "100px") ("background-color" "green")
+        //stocatile in 3 variabile diferite
+        // folositile pentru a construi un patrat cu ele
+
+        const saveToLocalStorage = (key, value) => {
+            localStorage.setItem(key, value);
+        }
+        let width = saveToLocalStorage("width", "100px");
+        let height = saveToLocalStorage("height", "100px");
+        let color = saveToLocalStorage("background-color", "green");
+
+        const getFromLocalStorage = (key) => {
+            const value = localStorage.getItem(key);
+            return value;
+            console.log(value)
+        }
+        let var1 = getFromLocalStorage("width");
+        let var2 = getFromLocalStorage("height");
+        let var3 = getFromLocalStorage("background-color");
+
+
+        const square = document.createElement("div")
+        square.setAttribute("style", `width:${var1} ; height:${var2} ;  background-color:${var3}`);
+        document.body.appendChild(square);
+
+
+        //Obiectul de mai jos il puneti intr-un fisier separat "world.json"
+        //faceti fech intr-un fisier separat de index.js
+        //importati fetch-ul in index.js
+        // stocati tot raspunsul in localStorage - hint - stringify
+        // Folosindu-va de html css si JS afisati autorul si tilul iar dedesubt video-ul sa putem da play(folositi media)
+        // in functie de rating afisati atatea stele cat are ratingul de exemplu daca ratingul e 3 afisam sub video * * *
+
+        // [
+        //     {
+        //         "youtubeVideo": "https://www.youtube.com/watch?v=CBwKJfrm5-U",
+        //         "title": "Bali Travel Guide - How to travel Bali",
+        //         "author": "Allan Su",
+        //         "rating": 4
+        //     },
+        //     {
+        //         "youtubeVideo": "https://www.youtube.com/watch?v=oSexfR0Ubzw",
+        //         "title": "Rome in 4k",
+        //         "author": "Around The World 4k",
+        //         "rating": 5
+        //     },
+        //     {
+        //         "youtubeVideo": "https://www.youtube.com/watch?v=k7ZqiSKIB9g",
+        //         "title": "Glasgow Vacation Travel Guid",
+        //         "author": "Expedia",
+        //         "rating": 3
+        //     },
+        //     {
+        //         "youtubeVideo": "https://www.youtube.com/watch?v=xl3QM22kWV0",
+        //         "title": "Around Malaysia",
+        //         "author": "Drone Around The world",
+        //         "rating": 2
+        //     }
+        // ]
+
+        fetchExample();
+
+        let items = window.localStorage.getItem("answer");
+        console.log(items);
+        items = JSON.parse(items)
+
+        for (i = 0; i < items.length; i++) {
+            let item = items[i];
+            let title = document.createElement("h1");
+            title.textContent = item.title;
+
+            let author = document.createElement("h4");
+            author.textContent = item.author;
+
+            let video = document.createElement("video");
+            video.width = "400";
+            video.controls = true
+            let source = document.createElement("source");
+            source.src = item.youtubeVideo;
+            video.appendChild(source);
+            let stars = document.createElement("h5");
+
+            let starsRating = "";
+            for (j = 0; j < item.rating; j++){
+                starsRating += "*";
+            }
+            stars.textContent = starsRating;
+
+
+            document.body.appendChild(title);
+            document.body.appendChild(author);
+            document.body.appendChild(video);
+            document.body.appendChild(stars);
+
+
+
+        }
+
+
+
+    </script>
+
+
+    </html>
+</DOCTYPE>

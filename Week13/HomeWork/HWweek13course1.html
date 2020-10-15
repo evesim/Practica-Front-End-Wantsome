@@ -1,0 +1,47 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Promises</title>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+    </body>
+    <script>
+        // 4.Creati doua functii care folosesc Promises pentru a putea face o inlantuire (Promise chain). Prima functie,
+        // capitalizeWords(), va primi ca si argument un array de cuvinte si va aplica o operatiune de capitalize pe acestea.
+        // A doua functie, sortWords(), va primi ca si argument rezultatul primului Promise si va sorta cuvintele in ordine
+        // alfabetica. In cazul in care array-ul initial contine un element cu o valoare diferita de tipul string, se va face reject.
+
+        function capitalizeWords(arr) {
+            return new Promise(function (resolve, reject) {
+                arr = arr.map(function (x) { return x.toUpperCase(); })
+                resolve(arr);
+            })
+        }
+        capitalizeWords(["pere", "are", "mere"])
+            .then(function result(result) {
+                console.log(result)
+                sortWords(result)
+                    .then(function result(result) { console.log(result) })
+                    .catch(function result(erorr) { console.log(erorr) })
+            })
+            .catch(function result(erorr) { console.log(erorr) })
+
+        function sortWords(final) {
+            return new Promise(function (resolve, reject) {
+                final = final.sort();
+                resolve(final);
+            })
+        }
+
+        // 5.Implementati functionalitatea anterior prezentata si folositi-o pentru a apela mai multe API-uri externe, la alegere (
+        // cel putin 3 )  
+        
+        // WHAT ON THE MOTHER ...??? I DON'T UNDERSTAND THE REQUIREMENT
+    </script>
+
+    </html>
+</DOCTYPE>
