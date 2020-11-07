@@ -1,5 +1,5 @@
 class ProductView {
-    constructor() {
+    constructor(product) {
         const mainDiv = document.createElement('div');
         const productImage = document.createElement('img');
         const productTitle = document.createElement('h6');
@@ -9,7 +9,7 @@ class ProductView {
         const ratingUserType = document.createElement('p');
 
 
-        productImage.setAttribute('src', 'https://picsum.photos/300/200');
+        productImage.setAttribute('src', products.image);
         productTitle.innerText = 'My title';
         productName.innerHTML = 'Product name';
         this.addRatingStart(ratingDivEl);
@@ -36,6 +36,7 @@ class ProductView {
             parentEl.appendChild(ratingImgEl);
         }
     }
+
 }
 
 
